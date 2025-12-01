@@ -1,6 +1,11 @@
 # Vishvakannada-website
 A responsive website for Vishvakannada Foundation, built using HTML, CSS, and JavaScript.
+## About
 
+Vishvakannada-website is the  website for **Vishvakannada Foundation**, a non-profit organisation dedicated to promoting Kannada language, educating children in Kannada, and social welfare.  
+This website provides visitors with information about the foundation’s mission, work, events, and offers a way to connect with and support the foundation.
+
+The website is fully built with plain **HTML**, **CSS**, and **JavaScript**, making it light-weight and easy to host.  
 # Features
 
 - Responsive design — works on desktop and mobile devices  
