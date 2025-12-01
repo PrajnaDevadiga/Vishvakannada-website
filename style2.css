@@ -1,0 +1,706 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fenix&display=swap");
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style:none;
+    font-family: 'Poppins',sans-serif;
+	
+}
+body{
+	background-color:white;
+}
+html{
+    height: 2000px;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Keeps the logo on the left and items in the right */
+    padding: 15px 50px;
+	background-color: black;
+    z-index: 1111;
+}
+.header-right {
+    display: flex; 
+    align-items: center; 
+    margin-left: auto; /* This will push the entire container to the right */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    
+    margin-right: 15px; /* Space between logo and text */
+}
+
+header .logo h1 {
+    font-size: 30px;
+	background: linear-gradient(90deg, #FFDD00, #FF0000); /* Yellow to Red */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Dancing Script', cursive; /* Casual handwritten font */
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 4px #0a0a0a66;
+    margin: 0;
+}
+header ul {
+    display: flex;
+    margin: 0;
+    padding-left: 20px; /
+    margin-left: auto;/* Space between logo section and navigation */
+}
+
+
+
+header ul li {
+    position: relative; /* Add this line */
+    padding: 0 15px;
+}
+
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+  display: block;
+    transition: .4s;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+
+
+header ul li ul {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f7f7f7; /* Matches the header background */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 10px 0;
+    width: 250px;
+    z-index: 999; /* Ensures it stays above other content */
+    border-radius: 4px; /* Add slight roundness to the dropdown */
+}
+
+header ul li ul li {
+    width: 100%;
+}
+
+header ul li ul li a {
+    padding: 10px 20px;
+    white-space: nowrap;
+    color: #333;
+}
+
+/* Remove underline or border from dropdown items */
+header ul li ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color:black;
+}
+
+/* Show the dropdown on hover */
+header ul li:hover ul {
+    display: block;
+}
+header ul li .donate:hover {
+    background-color: #a3141b;
+}
+header ul li a:hover {
+    color:#473738;
+}
+header .bars {
+    display:none;
+    color:white;
+}
+header.active{
+    background-color:black;
+    box-shadow: 1px 0px 0px #dddd;
+}
+header.active .logo a{
+    color: black;
+}
+header .active ul{
+    color:black;
+}
+
+
+@media(max-width: 991px) {
+    .big-bg {
+        background-image: url('head2.jpg'); /* Replace with your image URL */
+        background-size: cover; /* Ensures the image covers the entire area */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    }
+    
+    header .navigation {
+        position: absolute;
+        top: 60px; /* Position below the header */
+        right: -100%; /* Start hidden */
+        width: 50%; /* Adjust width for mobile */
+        height: calc(100vh - 60px); /* Full height minus header */
+        background-color: black; /* Background color */
+        display: flex;
+        flex-direction: column;
+		background-color: black;
+        justify-content: flex-start; /* Align items at the top */
+        align-items: center;
+        transition: right 0.5s ease; /* Smooth transition */
+        box-shadow: -1px 0px 0px #dd;
+    }
+    
+    header .navigation li {
+        margin: 11px 0;
+        width: 100%; /* Full width for mobile */
+        text-align: center; /* Center text */
+    }
+    header {
+        width: 100%;
+        max-width: 1200px; /* Set a maximum width for the header */
+        margin: 0 auto; /* Center the header */
+		
+    }
+    
+    header .navigation {
+        max-width: 100%; /* Ensure the navigation doesn't exceed header width */
+    }
+    
+    /* Adjust padding or margin for the navigation items if necessary */
+    header ul {
+        padding: 0 20px; /* Add horizontal padding */
+    }
+    
+    header ul li {
+        padding: 0 15px; /* Space between menu items */
+    }
+    header ul li a:hover {
+        color:#cac2c2;
+    }
+    header .navigation li a {
+        color: #fff;
+        padding: 15px 0; /* Padding for clickable area */
+        width: 100%; /* Make links full width */
+    }
+
+    header .bars {
+        display: block; 
+        z-index:-1;/* Show hamburger menu */
+    }
+
+    /* Dropdown styles for mobile */
+    header ul li ul {
+        position: absolute; /* Dropdown position */
+        top: 100%; /* Position below parent */
+        left: 0; /* Align to left */
+        width: 100%; /* Full width */
+        display: none; /* Hide dropdown by default */
+    }
+
+    /* Show dropdown on hover */
+    header ul li:hover ul {
+        display: block; /* Show dropdown on hover */
+    }
+    header ul li:hover ul {
+        display: block; /* Show dropdown on hover */
+        background-color:black ;
+         /* Match the main header color */
+    }
+    header ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none; /* Keep it hidden initially */
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+
+    header ul li.open ul {
+        display: block; /* Open the dropdown when the class 'open' is added */
+		background-color:BLACK;
+    }
+
+
+    header ul li ul li a {
+        color:rgba(255, 255, 255, 0.2); /* Set dropdown text color to white */
+    }
+    
+    /* Optionally, add hover effect for dropdown items */
+    header ul li ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color:#e0e0e0 /* Light hover effect */
+    }
+    
+}
+/* Default styling for desktop */
+.big-bg {
+    background: url('book.jpg'); /* Ensure correct path */
+    background-size: cover; /* Ensure it covers the entire container */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* For large tablets and small laptops */
+@media (max-width: 1024px) {
+    .big-bg {
+        background-size: cover;
+        height: 90vh; /* Adjust height for tablets */
+        background-position: center;
+    }
+}
+
+/* For tablets in portrait mode */
+@media (max-width: 768px) {
+    .big-bg {
+        background-size: cover;
+        height: 80vh;
+        background-position: center;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .big-bg {
+        background-size: cover;
+        height: 60vh;
+        background-position: center;
+    }
+}
+@media (max-width: 768px) {
+    .big-bg {
+        background-image: url("book.jpg"); 
+        background-size: cover;/* Use a different image for tablets if needed */
+        height: 80vh; /* Adjust height for tablets */
+        width:100%;
+    }
+}
+
+/* Media query for mobile phones */
+@media (max-width: 480px) {
+    .big-bg {
+        background-image: url("book.jpg"); /* Use a different image for mobile if needed */
+        height: 60vh; 
+        width:100%;/* Adjust height for mobile */
+         background-size: cover;
+    }
+}
+.big-bg{
+    background-image:url("book.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align :center;
+}
+.big-bg .bg-content{
+    color:black;
+    font-weight: bold;
+}
+.big-bg .bg-content h1{
+    font-size: 5vw;
+}
+.big-bg .bg-content hr{
+    background-color:black;
+    width:50%;
+    height: 1px;
+    margin: 15px auto;
+
+}
+/*screen reader */
+#screen-reader-button {
+    background: none;
+    color: white; 
+    border: none;
+    padding: 5px 15px; 
+    border-radius: 50%;
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+}
+
+#screen-reader-button:focus{
+    outline: none; /* Remove default focus outline */
+}
+
+#screen-reader-button:hover {
+  color:yellow ;
+}
+
+#screen-reader-button i {
+    font-size: 1.5rem; /* Icon size */
+    vertical-align: middle; /* Center the icon */
+        }
+
+@media (max-width: 600px) {
+    .bg-content h1 {
+        font-size: 8vw; /* Adjust font size for smaller screens */
+    }
+    .bg-content p {
+        font-size: 3vw; /* Adjust font size for larger screens */
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    .bg-content h1 {
+        font-size: 3vw; /* Adjust font size for larger screens */
+    }
+    .bg-content p {
+        font-size: 1vw; /* Adjust font size for larger screens */
+    }
+}
+@media (max-width: 380px) {
+    header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        padding: 10px; /* Adjust padding for header */
+    }
+
+    .logo {
+        width: 100%; /* Make logo container full width */
+        justify-content: center; /* Center content */
+    }
+
+    .logo img {
+        width: 40%; /* Adjust image width for small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .logo h1 {
+        font-size: 6vw; /* Responsive font size for very small screens */
+        font-weight: bold; /* Make the logo heading bold */
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center the text */
+        white-space: nowrap; /* Prevent wrapping */
+        color: white; /* Text color */
+    }
+
+    .navigation {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center navigation items */
+        margin-top: 10px; /* Space below logo */
+    }
+
+    .navigation li {
+        padding: 5px 0; /* Space between items */
+    }
+
+}
+
+   
+
+@media (max-width: 400px) {
+    header .logo img {
+        width: 35%; /* Logo size for small screens */
+    }
+
+}
+.ict-education-section {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background-color: #ffffff; /* White background color */
+    padding: 40px 20px; /* Padding around the content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker shadow for contrast */
+    margin: 20px 0; /* Margin to separate from other sections */
+}
+.ict-education-content {
+    max-width: 800px; /* Max width for better readability */
+    text-align: start; /* Center text within this div */
+}
+.ict-education-content h1{
+    font-weight: bold;
+}
+.ict-education-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.ict-education-list li {
+    font-size: 18px; /* Font size for list items */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 15px; /* Space between items */
+    color: #333333; /* Dark gray for text */
+}
+
+.ict-education-content p {
+    font-size: 16px; /* Font size for paragraph */
+    line-height: 1.6; /* Line height for better readability */
+    color: #333333; /* Dark gray for text */
+    margin-top: 15px; /* Space above the paragraph */
+}
+
+.ict-education-section {
+    opacity: 0; /* Start hidden */
+    transform: translateY(30px); /* Move down for animation */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.text-section {
+    width: 50%;
+    padding-right: 20px;
+    padding-left:40px;
+    animation: slideInLeft 1.2s ease-in-out;
+}
+
+.text-section h2 {
+    font-size: 36px;
+     font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.text-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.image-section {
+    width: 45%;
+    padding-top: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: slideInRight 1.2s ease-in-out;
+}
+
+/* Animation Keyframes */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Styling */
+@media (max-width: 991px) {
+    .content-container {
+        flex-direction: column;
+    }
+
+    .text-section, .image-section {
+        width: 100%;
+        padding: 0;
+    }
+
+    .text-section {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .text-section h2 {
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .text-section p {
+        font-size: 16px;
+    }
+}
+.text-section, .text-section h2, .text-section p {
+    opacity: 0; /* Ensure text starts hidden */
+}
+.text-section,
+.text-section h2,
+.text-section p {
+    opacity: 0; /* Start hidden */
+    transform: translateY(30px); /* Initial position for animation */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.image-section {
+    opacity: 0; /* Start hidden */
+    transform: translateX(50px); /* Initial position for animation */
+}
+.container-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    max-width: 100%;
+}
+
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Automatically adjusts for larger screens */
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Testimonial Box Styles */
+.testimonial-box {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+.testimonial-box:hover {
+    transform: scale(1.05);
+    background-color: #1a1a1a; /* Darker black on hover */
+}
+/* Media Queries */
+@media (max-width: 400px) {
+    .testimonial-container {
+        grid-template-columns: 1fr; /* Stack cards vertically on small screens */
+    }
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+    .testimonial-container {
+        grid-template-columns: 1fr; /* Still stack cards vertically */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1095px) {
+    .testimonial-container {
+        grid-template-columns: repeat(2, 1fr); /* Two cards per row for medium screens */
+    }
+}
+
+
+/* Default styling for light mode */
+body {
+    background-color: #f5f5f5;
+    color: #444444;
+  }
+  
+  /* Highlight Section */
+  .award-highlight {
+    
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+    animation: glow 2s infinite alternate;
+  }
+  
+  /* Glowing animation */
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 10px #6c757d, 0 0 20px #6c757d, 0 0 30px #6c757d;
+    }
+    100% {
+      box-shadow: 0 0 20px #495057, 0 0 30px #495057, 0 0 40px #495057;
+    }
+  }
+  
+  /* Hover effect */
+  .award-highlight:hover {
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Dark mode styling */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333333; /* Dark background */
+      color: #f5f5f5; /* Light text color */
+    }
+  
+    .award-highlight {
+      background-color: #6c757d; /* Same blue-grey background */
+      color: #333333; /* Dark text color in dark mode */
+    }
+  }
+  
+  .b p {
+    margin: 0;
+}
+.b a{
+    text-decoration: none;
+    color:white;
+}
+.b a:hover{
+    color: #473738;
+}
+/* Responsive font sizes */
+@media (max-width: 768px) { /* Tablet */
+    .b {
+        font-size: 18px; /* Smaller font size for tablets */
+    }
+}
+
+@media (max-width: 480px) { /* Mobile */
+    .b {
+   

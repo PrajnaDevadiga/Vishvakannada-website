@@ -1,0 +1,794 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title>Contact Us</title>
+	<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+	
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fenix&display=swap");
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style:none;
+    font-family: 'Poppins',sans-serif;
+}
+html{
+    height: 2000px;
+}
+body {
+    background: #f7f5f5;
+}
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Keeps the logo on the left and items in the right */
+    padding: 15px 50px;
+    z-index: 1111;
+}
+.header-right {
+    display: flex; 
+    align-items: center; 
+    margin-left: auto; /* This will push the entire container to the right */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    
+    margin-right: 15px; /* Space between logo and text */
+}
+
+header .logo h1 {
+    font-size: 30px;
+	background: linear-gradient(90deg, #FFDD00, #FF0000); /* Yellow to Red */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Dancing Script', cursive; /* Casual handwritten font */
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 4px #0a0a0a66;
+    margin: 0;
+}
+
+header ul {
+    display: flex;
+    margin: 0;
+    padding-left: 20px; /
+    margin-left: auto;/* Space between logo section and navigation */
+}
+
+
+
+header ul li {
+    position: relative; /* Add this line */
+    padding: 0 15px;
+}
+
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+  display: block;
+    transition: .4s;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+
+
+header ul li ul {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f7f7f7; /* Matches the header background */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 10px 0;
+    width: 250px;
+    z-index: 999; /* Ensures it stays above other content */
+    border-radius: 4px; /* Add slight roundness to the dropdown */
+}
+
+header ul li ul li {
+    width: 100%;
+}
+
+header ul li ul li a {
+    padding: 10px 20px;
+    white-space: nowrap;
+    color: #333;
+}
+
+/* Remove underline or border from dropdown items */
+header ul li ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color:black;
+}
+
+/* Show the dropdown on hover */
+header ul li:hover ul {
+    display: block;
+}
+header ul li .donate:hover {
+    background-color: #a3141b;
+}
+header ul li a:hover {
+    color:#e0e0e0;
+}
+header .bars {
+    display:none;
+    color:white;
+}
+header.active{
+    background-color:black;
+    box-shadow: 1px 0px 0px #dddd;
+}
+header.active .logo a{
+    color: black;
+}
+header .active ul{
+    color:black;
+}
+@media(max-width: 991px) {
+    .big-bg {
+        background-image: url('head2.jpg'); /* Replace with your image URL */
+        background-size: cover; /* Ensures the image covers the entire area */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    }
+
+
+    
+    header .navigation {
+        position: absolute;
+        top: 60px; /* Position below the header */
+        right: -100%; /* Start hidden */
+        width: 50%; /* Adjust width for mobile */
+        height: calc(100vh - 60px); /* Full height minus header */
+        background-color: black; /* Background color */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Align items at the top */
+        align-items: center;
+        transition: right 0.5s ease; /* Smooth transition */
+        box-shadow: -1px 0px 0px #dd;
+    }
+    
+    header .navigation li {
+        margin: 11px 0;
+        width: 100%; /* Full width for mobile */
+        text-align: center; /* Center text */
+    }
+    header {
+        width: 100%;
+        max-width: 1200px; /* Set a maximum width for the header */
+        margin: 0 auto; /* Center the header */
+    }
+    
+    header .navigation {
+        max-width: 100%; /* Ensure the navigation doesn't exceed header width */
+    }
+    
+    /* Adjust padding or margin for the navigation items if necessary */
+    header ul {
+        padding: 0 20px; /* Add horizontal padding */
+    }
+    
+    header ul li {
+        padding: 0 15px; /* Space between menu items */
+    }
+    header ul li a:hover {
+        color:#cac2c2;
+    }
+    header .navigation li a {
+        color: #fff;
+        padding: 15px 0; /* Padding for clickable area */
+        width: 100%; /* Make links full width */
+    }
+
+    header .bars {
+        display: block; 
+        z-index:-1;/* Show hamburger menu */
+    }
+
+    /* Dropdown styles for mobile */
+    header ul li ul {
+        position: absolute; /* Dropdown position */
+        top: 100%; /* Position below parent */
+        left: 0; /* Align to left */
+        width: 100%; /* Full width */
+        display: none; /* Hide dropdown by default */
+    }
+
+    /* Show dropdown on hover */
+    header ul li:hover ul {
+        display: block; /* Show dropdown on hover */
+    }
+    header ul li:hover ul {
+        display: block; /* Show dropdown on hover */
+        background-color:black ;
+         /* Match the main header color */
+    }
+    header ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none; /* Keep it hidden initially */
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+
+    header ul li.open ul {
+        display: block; /* Open the dropdown when the class 'open' is added */
+		background-color:BLACK;
+    }
+
+
+    header ul li ul li a {
+        color:rgba(255, 255, 255, 0.2); /* Set dropdown text color to white */
+    }
+    
+    /* Optionally, add hover effect for dropdown items */
+    header ul li ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color:#e0e0e0 /* Light hover effect */
+    }
+    
+}
+
+//My code//
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+	
+	font-family:calibri;
+}
+
+.header2 {
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../loaner-loan-company-html-website-template/Poorchildren.jpg");
+  height: 70vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .hero-text{
+  text-align:center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:white;
+  font-size:50px;
+
+}
+.hero-p{
+text-align:center;
+  position: absolute;
+  top: 60%;
+  left: 35%;
+  color:white;
+}
+.hero-button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  background-color:black;
+  text-align: center;
+  cursor: pointer;
+   position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:black;
+  font-size:30px;
+}
+.hero-text button:hover {
+  background-color: green;
+  color: black;
+}
+	 main {
+    max-width: 800px;
+    margin: 20px auto;
+
+}
+
+.contact-form {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+	background-color:#fff0f5;
+	margin-top:10%;
+	margin-left:10vw;
+	margin-right:10vw;
+	width:50vw;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+	
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+	
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+	margin-left:100px;
+}
+
+input, textarea {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+	align-items:center;
+	margin-left:100px;
+}
+.checkbox{
+  display: block;
+  position: relative;
+  padding-left: 0px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+}
+
+
+
+button {
+    padding: 10px 20px;
+    background-color:white;
+    color:black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:#0F52BA;
+	color:white;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+
+a {
+    color:white;
+    text-decoration:none;
+}
+
+.error {
+    color:red;
+}
+select
+{
+width:70%;
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 3px; 
+margin-bottom: 15px;
+}
+
+.b {
+            
+    padding-top: 10px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+}
+
+.b p {
+    margin: 0;
+}
+
+
+@media (max-width: 380px) {
+    header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        padding: 10px; /* Adjust padding for header */
+    }
+
+    .logo {
+        width: 100%; /* Make logo container full width */
+        justify-content: center; /* Center content */
+    }
+
+    .logo img {
+        width: 40%; /* Adjust image width for small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .logo h1 {
+        font-size: 6vw; /* Responsive font size for very small screens */
+        font-weight: bold; /* Make the logo heading bold */
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center the text */
+        white-space: nowrap; /* Prevent wrapping */
+        color: white; /* Text color */
+    }
+
+    .navigation {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center navigation items */
+        margin-top: 10px; /* Space below logo */
+    }
+
+    .navigation li {
+        padding: 5px 0; /* Space between items */
+    }
+
+}
+
+   
+
+@media (max-width: 400px) {
+    header .logo img {
+        width: 35%; /* Logo size for small screens */
+    }
+
+}
+
+
+</style>
+</head>
+<body>
+  <header id="header">
+    <div class="logo">
+      <a href="home.html"><img src="../loaner-loan-company-html-website-template/VishvaKannadaLogo[1].jpeg" alt="vishvakannada_logo" width="70px" height="50px"></a>
+      <h1>VishvaKannada</h1>
+    </div>
+    <div class="header-right"></div>
+    <ul class="navigation">
+                    <li><a href="home.html">Home</a></li>
+                    <li> <a href="#">About us</a></li>
+                    <li><a href="#">Projects</a>
+                      <ul>
+                          <li><a href="Scratch.html">Scratch</a></li>
+                          <li><a href="KLOGO.html">Kannada logo</a></li>
+                          
+					          </ul>
+                  </li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="Donate.html">Donate</a></li>             
+                 </ul>     			
+                 <div class="bars" id="bar">
+                  <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 100 80" width="30px" fill="#ffffff">
+                          <rect class="bar1" width="100" height="10"></rect>
+                          <rect class="bar2" y="25" width="100" height="10"></rect>
+                          <rect class="bar3" y="50" width="100" height="10"></rect>
+                        </svg>
+                      </div>
+            </div>
+  </header>
+  <div class="header2">
+        <div >
+    <h1 class="hero-text">Support our cause</h1>
+    <p class="hero-p" >Your generous donation will make a significant impact</p>
+    <button class="hero-button"><a href="#donation">Donate </a></button>
+  </div>
+
+</div>
+
+<main>
+<div id="donation"> 
+
+        <section class="contact-form">
+            <form id="contact-form" onsubmit="querypage(event)">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name*" required>
+                    <div id="nameError" class="error"></div>
+					<div>
+                
+				<div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email*" required>
+                    <div id="emailError" class="error"></div>
+                </div>
+				
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter Phone No.*" required>
+                    <div id="phoneError" class="error"></div>
+                </div>
+				
+				<div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea type="text" id="address" name="address" placeholder="Enter complete address" required></textarea>
+                    <div id="emailError" class="error"></div>
+                </div>
+				
+                
+				
+				<div class="form-group">
+                    <label for="donate">Donate:</label>
+                    <input type="number" id="donate" name="donate" placeholder="Enter amount in Rupees" required>
+                </div>
+				
+				<div class="form-group">
+                    <label for="support">I pledge my support for</label>
+                    <select id="support" name="support"  style="width:70%;padding: 8px;border: 1px solid #ccc;border-radius: 3px; margin-bottom: 15px; margin-left:100px;" required>
+					 <option value="scratch">Sractch</option>
+					 <option value="Kannada LOGO">Kannada LOGO</option>
+					 <option value="Python in Kannada">Python in Kannada</option>
+					 <option value="Other">Other</option>
+					 </select>
+                </div>
+				
+				<div class="form-group">
+                    <label for="payment">Payment mode</label>
+                    <select id="payment" name="payment" style="margin-left:100px;"   required>
+					 <option value="Credit card">Credit card</option>
+					 <option value="Debit card">Debit card</option>
+					 <option value="Net Banking">Net Banking</option>
+					 <option value="UPI">UPI</option>
+					 <option value="Wallet">Wallet</option>
+					 </select>
+                </div>
+			</div>	
+				<button type="submit"  style="margin-left:170px;">Submit</button>
+				<button type="submit" style="margin-right:200px;" onclick="back()">Back<a href="home.html"></a></button>
+            </form>
+        </section>
+    </main>
+	
+	<div style="margin-top:30px;border:1px solid black;">
+<h2 style="text-align:left;">Terms and conditions:</h2>
+
+<ul >
+<li>1.All donations are final and non-refundable. However, if you believe there has been a significant error or misrepresentation, please contact us immediately</li>
+<li>2.You will get email from us after filling the form. Please provide active email.</li>
+<li>3.Your personal information will be handled in accordance with our Privacy Policy</li>
+<li>4.Vishvakannada bears no responsibility for donations transferred to any indivisuals bank account</li>
+</ul>
+
+
+<input type="checkbox" id="tc" name="tc" value="trc" style="margin-left:0px; width:5%; " class="checkmark" required >
+	 <label for="tc" class="checkbox" style="display:inline;">By clicking the box, you acknowledge that you have read, understood, and agreed to these Terms and Conditions.
+
+	 <span class="checkmark"></span></label>
+</div><br><br><br><br><br><br>	
+
+
+<footer class="b" style="background-color:black; color:#E1D9D1; text-align:center; padding:20px;">
+    <p>Copyright &copy; 2024 VishvaKannada.com</p>
+    <a href="https://www.facebook.com/VishvaKannada" target="_blank">
+<p><i class="fa-brands fa-facebook-f"></i></a>
+<i class="fa-brands fa-instagram" style="padding:10px"></i>
+<i class="fa-brands fa-twitter"></i>
+<i class="fa-brands fa-linkedin"></i></p>
+    <p>Privacy Policy</p>
+	
+
+	
+</footer>
+
+  
+    <script>
+        function querypage(event)
+		{
+            event.preventDefault();
+            clearErrorMessages();
+			const isTermsChecked = document.getElementById('tc').checked;
+  if (!isTermsChecked)
+  {
+    alert('Please agree to the Terms and Conditions before submitting the form.');
+    return false;
+  }
+
+            if (validation()) 
+			{
+			window.location.href = "Thankyou.html";
+                // Redirect to the home page if validation passes
+                 // Change to your home page URL
+            }
+			else 
+			{
+			return false;
+			}
+			
+		if (back())
+			{
+			window.location.href = "home.html";
+			}
+			
+        
+		
+		function back()
+		{
+		window.location.href = "home.html";
+		}
+		
+		 function validation() 
+		{
+            return validateName()  && validatePhone() && validateEmail() && validateDonationAmount();
+					window.location.href = "Thankyou.html"; 
+
+			
+        }
+		}
+
+       
+
+        function validateName() 
+		{
+            const name = document.getElementById("name").value.trim();
+            const patName = /^[A-Za-z\s]+$/;
+            const nameError = document.getElementById("nameError");
+
+            if (name === "") 
+			{
+                nameError.textContent = "Name is required.";
+                return false;
+            }
+            if (!patName.test(name)) 
+			{
+                nameError.textContent = "Invalid name! Only alphabets are allowed.";
+                return false;
+            }
+            return true;
+        }
+
+        function validatePhone()
+		{
+            const pno = document.getElementById("phone").value.trim();
+            const patPhone = /^\d{10}$/;
+            const phoneError = document.getElementById("phoneError");
+
+            if (pno === "") 
+			{
+                phoneError.textContent = "Please enter phone number.";
+                return false;
+            }
+            if (!patPhone.test(pno)) 
+			{
+                phoneError.textContent = "Invalid phone number!";
+                return false;
+            }
+            return true;
+        }
+
+        function validateEmail() 
+		{
+            const email = document.getElementById("email").value.trim();
+            const patEmail = /^(\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*)$/;
+            const emailError = document.getElementById("emailError");
+
+            if (email === "") 
+			{
+                emailError.textContent = "Email is required.";
+                return false;
+            }
+            if (!patEmail.test(email)) 
+			{
+                emailError.textContent = "Invalid email format. Ex: example@gmail.com";
+                return false;
+            }
+            return true;
+        }
+		function validateDonationAmount()
+		{
+		const donationAmount = document.getElementById("donate").value;
+
+			if (donationAmount <= 1)
+			{
+			alert("Donation amount must be greater than 1");
+			return false;
+			}
+		return true;
+	
+		}
+
+        function clearErrorMessages()
+		{
+            document.getElementById('nameError').textContent = '';
+            document.getElementById('phoneError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+
+        }
+		
+		
+		
+		function mynav() {
+    let bar = document.getElementById("bar");
+    let nav = document.querySelector(".navigation");
+
+    // Toggle navigation menu visibility without changing the bars
+    bar.onclick = () => {
+        if (nav.style.right === "0%") {
+            nav.style.right = "-70%"; // Close the menu
+        } else {
+            nav.style.right = "0%"; // Open the menu
+        }
+    }
+}
+
+mynav();
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const dropdownToggles = document.querySelectorAll("header ul li");
+
+    dropdownToggles.forEach(function(toggle) {
+        toggle.addEventListener("click", function() {
+            // Close all other dropdowns
+            dropdownToggles.forEach(function(otherToggle) {
+                if (otherToggle !== toggle) {
+                    otherToggle.classList.remove("open");
+                }
+            });
+
+            // Toggle the clicked dropdown
+            toggle.classList.toggle("open");
+        });
+    });
+});
+function myheader(){
+    let header=document.getElementById("header");
+    window.addEventListener("scroll",function(){
+        if(window.scrollY>0){
+            header.classList.add("active");
+        }
+        else{
+            header.classList.remove("active");
+        }
+           })
+}
+myheader();
+    </script>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+

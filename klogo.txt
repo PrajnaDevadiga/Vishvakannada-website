@@ -1,0 +1,39 @@
+ಕನ್ನಡ ಲೋಗೋ
+India has made a mark in world software scene. This is largely due to the fact that Indians are good at English. Expatriate Indians working in USA also have made mark in the Information and Communication Technology (ICT) arena. But the true Indian lives in the villages of India. These people are totally cut-off from the benefits of ICT. This is due to the fact that computers still speak English. Only 5% of the population in India are comfortable with English. If we have to take the benefits of ICT to rural India, computers should use Indian languages (ILs). Kannada being an IL, the situation is not different. Karnataka Govt has taken many initiatives for taking ICT for common man.
+
+Taking ICT for common man has to be done at multiple levels. First step is to implement our languages in computers. Recently lot of effort is being devoted to create applications in Kannada and to localize the operating systems into Kannada. Govt of Karnataka has taken the initiative to standardize the implementation of Kannada in computers. It has also released a free software, which has been developed as per these standards. Next step is to create many application software in Kannada. These include database applications (revenue, banking, salary packages, etc.), web-sites and web-based based applications, documentation, e-books, etc. Bhumi software is the best example here.
+
+Another important area where ICT can make a difference is in the field of education. Use of ICT in education in Kannada context involves three categories. They are: –
+1. Teaching about computers in Kannada.
+2. Teaching science, maths, languages, etc. using computers.
+3. Teaching the programming logic in Kannada and thereby developing programming skills.
+
+Item numbers 1 and 2 are taken care by Mahiti Sindhu program. Item number 3 can be implemented by using Kannada version of LOGO program. All over the world people use LOGO to teach programming logic to kids (please read the separate document provided to know the educational benefits of LOGO). LOGO stands for Logic Oriented and Graphic Oriented. LOGO has been localized into many languages of the world (German, French, Italian, Spanish, Japanese, etc.). English version of LOGO is already being taught in most schools. Kannada medium students will be benefited by Kannada version of LOGO. Students will develop the thinking and anlysing powers in Kannada as the program uses the keywords in Kannada. The user interface, help and error messages are also in Kannada. Thus the Kannada medium students need not think in Kannada, translate it into English mentally, and then write the program. All thinking and writing happens in Kannada itself. Development of logic at young ages is not hampered by the lack of understanding of English language.
+
+Development of Kannada version of LOGO has been completed. This is the first IL version of LOGO. Kannada Logo project is part of the action plan announced by Karnataka Govt for using Kannada on computers.
+
+Click here to download Kannada Logo (1 MB ZIP file)
+
+A startup guide is available on using Kannada Logo. Click here to get it (416 KB PDF file)
+
+Please send the feedbacks to U B Pavanaja – pavanaja AT vishvakannada DOT com.
+
+System requirements
+1. Pentium-III or above PC with min 500 MHz speed, 128 MB RAM, 5MB Hard disk space for installing the application.
+2. Windows 98 or above
+3. Nudi font (Fontname: Nudi Akshara, Filename: N-AKSHARA.TTF). Nudi Akshara font can be downloaded from here. Put this file in WindowsFonts folder.
+
+Some links:
+1.  Report in Financial Express about Kannada Logo.
+
+2. Report in Vijay Times about Kannada Logo.
+
+3. Article about Kannada Logo in Prajavani Kannada Daily.
+
+4. Letters by readers of Prajavani appreciating Kannada Logo.
+
+5. MSW Logo.
+
+Acknowledgements: I would like to acknowledge the help rendered by A Sathyanarayana in translations and N K Smitha in programming.
+
+Kannada Logo has been blessed with Manthan Award 2006

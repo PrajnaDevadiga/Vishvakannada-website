@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Scratch</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <!--Bootstrap ================================================== -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+  <!--vendor css ================================================== -->
+  <link rel="stylesheet" type="text/css" href="css/vendor.css">
+
+  <!--Link Swiper's CSS ================================================== -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!--Link Swiper's CSS ================================================== -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Style Sheet ================================================== -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- Google Fonts ==================================================--> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=WindSong:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=WindSong:wght@400;500&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+	<style>
+	@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fenix&display=swap");
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title>Scratch</title>
+	<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+	
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fenix&display=swap");-->
+
+
+
+
+html{
+    height: 2000px;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Keeps the logo on the left and items in the right */
+    padding: 15px 50px;
+	background-color: black;
+    z-index: 1111;
+}
+.header-right {
+    display: flex; 
+    align-items: center; 
+    margin-left: auto; /* This will push the entire container to the right */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    
+    margin-right: 15px; /* Space between logo and text */
+}
+
+header .logo h1 {
+    font-size: 30px;
+	background: linear-gradient(90deg, #FFDD00, #FF0000); /* Yellow to Red */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Dancing Script', cursive; /* Casual handwritten font */
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 4px #0a0a0a66;
+    margin: 0;
+}
+header ul {
+    display: flex;
+    margin: 0;
+    padding-left: 20px; /
+    margin-left: auto;/* Space between logo section and navigation */
+}
+
+
+
+header ul li {
+    position: relative; /* Add this line */
+    padding: 0 15px;
+}
+
+
+header ul li a {
+    text-decoration: none;
+  display: block;
+    transition: .4s;
+    text-transform: uppercase;
+    font-weight:bold;
+	color:black;
+}
+
+
+
+header ul li ul {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f7f7f7; /* Matches the header background */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 10px 0;
+    width: 250px;
+    z-index: 999; /* Ensures it stays above other content */
+    border-radius: 4px; /* Add slight roundness to the dropdown */
+}
+
+header ul li ul li {
+    width: 100%;
+	
+}
+
+header ul li ul li a {
+    padding: 10px 20px;
+    white-space: nowrap;
+	color:#fff;
+	
+}
+
+/* Remove underline or border from dropdown items */
+header ul li ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+/* Show the dropdown on hover */
+header ul li:hover ul {
+    display: block;
+}
+header ul li .donate:hover {
+    background-color: #a3141b;
+}
+header ul li a:hover {
+    color:#e0e0e0;
+}
+header .bars {
+    display:none;
+    color:white;
+}
+header.active{
+    background-color:black;
+    box-shadow: 1px 0px 0px #dddd;
+}
+header.active .logo a{
+    color: black;
+}
+header .active ul{
+    color:black;
+}
+ header .navigation li a {
+       color: #fff;
+        padding: 15px 0; /* Padding for clickable area */
+        width: 100%; /* Make links full width */
+    }
+	
+}
+
+ /*screen reader */
+        #screen-reader-button {
+            background: none;
+            color: white; 
+            border: none;
+            padding: 5px 15px; 
+            border-radius: 50%;
+            cursor: pointer; 
+            transition: background-color 0.3s ease;
+        }
+
+        #screen-reader-button:focus{
+            outline: none; /* Remove default focus outline */
+        }
+
+        #screen-reader-button:hover {
+          color:yellow ;
+        }
+
+        #screen-reader-button i {
+            font-size: 1.5rem; /* Icon size */
+            vertical-align: middle; /* Center the icon */
+        }
+
+
+
+@media(max-width: 991px) {
+    .big-bg {
+        background-image: url('head2.jpg'); /* Replace with your image URL */
+        background-size: cover; /* Ensures the image covers the entire area */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    }
+    
+    header .navigation {
+        position: absolute;
+        top: 60px; /* Position below the header */
+        right: -100%; /* Start hidden */
+        width: 50%; /* Adjust width for mobile */
+        height: calc(100vh - 60px); /* Full height minus header */
+        background-color: black; /* Background color */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Align items at the top */
+        align-items: center;
+        transition: right 0.5s ease; /* Smooth transition */
+        box-shadow: -1px 0px 0px #dd;
+		color:white;
+    }
+    
+    header .navigation li {
+        margin: 11px 0;
+        width: 100%; /* Full width for mobile */
+        text-align: center; /* Center text */
+    }
+    header {
+        width: 100%;
+        max-width: 1200px; /* Set a maximum width for the header */
+        margin: 0 auto; /* Center the header */
+		
+    }
+    
+    header .navigation {
+        max-width: 100%; /* Ensure the navigation doesn't exceed header width */
+    }
+    
+    /* Adjust padding or margin for the navigation items if necessary */
+    header ul {
+        padding: 0 20px; /* Add horizontal padding */
+    }
+    
+    header ul li {
+        padding: 0 15px; /* Space between menu items */
+    }
+    header ul li a:hover {
+        color:#cac2c2;
+    }
+	
+	}
+    header .navigation li a {
+        color: #fff;
+        padding: 15px 0; /* Padding for clickable area */
+        width: 100%; /* Make links full width */
+    }
+
+    header .bars {
+        display: block; 
+        z-index:-1;/* Show hamburger menu */
+    }
+
+    /* Dropdown styles for mobile */
+    header ul li ul {
+        position: absolute; /* Dropdown position */
+        top: 100%; /* Position below parent */
+        left: 0; /* Align to left */
+        width: 100%; /* Full width */
+        display: none; /* Hide dropdown by default */
+    }
+
+    /* Show dropdown on hover */
+    header ul li:hover ul {
+        display: block; /* Show dropdown on hover */
+    }
+    header ul li:hover ul {
+        display: block; /* Show dropdown on hover */
+        background-color:black ;
+         /* Match the main header color */
+    }
+    header ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none; /* Keep it hidden initially */
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+
+    header ul li.open ul {
+        display: block; /* Open the dropdown when the class 'open' is added */
+		background-color:white;
+    }
+
+
+    header ul li ul li a {
+        color:rgba(255, 255, 255, 0.2);/* Set dropdown text color to white */
+    }
+    
+    /* Optionally, add hover effect for dropdown items */
+    header ul li ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color:#e0e0e0 /* Light hover effect */
+    }
+    
+} 
+       
+
+
+
+
+
+@media (max-width: 380px) {
+    header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        padding: 10px; /* Adjust padding for header */
+		
+    }
+
+    .logo {
+        width: 100%; /* Make logo container full width */
+        justify-content: center; /* Center content */
+    }
+
+    .logo img {
+        width: 40%; /* Adjust image width for small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .logo h1 {
+        font-size: 6vw; /* Responsive font size for very small screens */
+        font-weight: bold; /* Make the logo heading bold */
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center the text */
+        white-space: nowrap; /* Prevent wrapping */
+        color: white; /* Text color */
+    }
+
+    .navigation {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center navigation items */
+        margin-top: 10px; /* Space below logo */
+    }
+
+    .navigation li {
+        padding: 5px 0; /* Space between items */
+    }
+	.navigation ul li a{
+	background-color:white;
+	}
+
+
+header ul li a:hover {
+    color:white;
+}
+}
+
+   
+   .b {
+            
+    padding-top: 10px;
+    font-size: 20px;
+    border-top: 1px solid #444;
+}
+
+.b p {
+    margin: 0;
+}
+.b a{
+    text-decoration: none;
+    color:white;
+}
+.b a:hover{
+    color: #473738;
+}
+
+@media (max-width: 400px) {
+    header .logo img {
+        width: 35%; /* Logo size for small screens */
+    }
+
+}
+<!--* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style:none;
+    font-family: 'Poppins',sans-serif;
+}
+html{
+    height: 2000px;
+}
+body {
+    background: #f7f5f5;
+}
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Keeps the logo on the left and items in the right */
+    padding: 15px 50px;
+	background-color: black;
+    z-index: 1111;
+}
+.header-right {
+    display: flex; 
+    align-items: center; 
+    margin-left: auto; /* This will push the entire container to the right */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    
+    margin-right: 15px; /* Space between logo and text */
+}
+
+header .logo h1 {
+    font-size: 30px;
+    color: #f7f5f5;
+    font-family: 'Dancing Script', cursive; /* Casual handwritten font */
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 4px #0a0a0a66;
+    margin: 0;
+}
+
+header ul {
+    display: flex;
+    margin: 0;
+    padding-left: 20px; /
+    margin-left: auto;/* Space between logo section and navigation */
+}
+
+
+
+header ul li {
+    position: relative; /* Add this line */
+    padding: 0 15px;
+}
+
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+  display: block;
+    transition: .4s;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+
+
+header ul li ul {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f7f7f7; /* Matches the header background */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 10px 0;
+    width: 250px;
+    z-index: 999; /* Ensures it stays above other content */
+    border-radius: 4px; /* Add slight roundness to the dropdown */
+}
+
+header ul li ul li {
+    width: 100%;
+}
+
+header ul li ul li a {
+    padding: 10px 20px;
+    white-space: nowrap;
+    color: #333;
+}
+
+/* Remove underline or border from dropdown items */
+header ul li ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color:black;
+}
+
+/* Show the dropdown on hover */
+header ul li:hover ul {
+    display: block;
+}
+header ul li .donate:hover {
+    background-color: #a3141b;
+}
+header ul li a:hover {
+    color:#e0e0e0;
+}
+header .bars {
+    display:none;
+    color:white;
+}
+header.active{
+    background-color:black;
+    box-shadow: 1px 0px 0px #dddd;
+}
+header.active .logo a{
+    color: black;
+}
+header .active ul{
+    color:black;
+}
+
+
+@media(max-width: 991px) {
+    .big-bg {
+        background-image: url('head2.jpg'); /* Replace with your image URL */
+        background-size: cover; /* Ensures the image covers the entire area */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    }
+    
+    header .navigation {
+        position: absolute;
+        top: 60px; /* Position below the header */
+        right: -100%; /* Start hidden */
+        width: 50%; /* Adjust width for mobile */
+        height: calc(100vh - 60px); /* Full height minus header */
+        background-color: black; /* Background color */
+        display: flex;
+        flex-direction: column;
+		background-color: black;
+        justify-content: flex-start; /* Align items at the top */
+        align-items: center;
+        transition: right 0.5s ease; /* Smooth transition */
+        box-shadow: -1px 0px 0px #dd;
+    }
+    
+    header .navigation li {
+        margin: 11px 0;
+        width: 100%; /* Full width for mobile */
+        text-align: center; /* Center text */
+    }
+    header {
+        width: 100%;
+        max-width: 1200px; /* Set a maximum width for the header */
+        margin: 0 auto; /* Center the header */
+		
+    }
+    
+    header .navigation {
+        max-width: 100%; /* Ensure the navigation doesn't exceed header width */
+    }
+    
+    /* Adjust padding or margin for the navigation items if necessary */
+    header ul {
+        padding: 0 20px; /* Add horizontal padding */
+    }
+    
+    header ul li {
+        padding: 0 15px; /* Space between menu items */
+    }
+    header ul li a:hover {
+        color:white;
+    }
+    header .navigation li a {
+        color: #fff;
+        padding: 15px 0; /* Padding for clickable area */
+        width: 100%; /* Make links full width */
+    }
+
+    header .bars {
+        display: block; 
+        z-index:-1;/* Show hamburger menu */
+    }
+
+    /* Dropdown styles for mobile */
+    header ul li ul {
+        position: absolute; /* Dropdown position */
+        top: 100%; /* Position below parent */
+        left: 0; /* Align to left */
+        width: 100%; /* Full width */
+        display: none; /* Hide dropdown by default */
+    }
+
+    /* Show dropdown on hover */
+    header ul li:hover ul {
+        display: block; /* Show dropdown on hover */
+    }
+    header ul li:hover ul {
+        display: block; /* Show dropdown on hover */
+        background-color:black ;
+         /* Match the main header color */
+    }
+    header ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none; /* Keep it hidden initially */
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+
+    header ul li.open ul {
+        display: block; /* Open the dropdown when the class 'open' is added */
+		background-color:BLACK;
+    }
+
+
+    header ul li ul li a {
+        color:rgba(255, 255, 255, 0.2); /* Set dropdown text color to white */
+    }
+    
+    /* Optionally, add hover effect for dropdown items */
+    header ul li ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color:#e0e0e0 /* Light hover effect */
+    }
+    
+}
+.icon-box:hover {
+  background-color: black;
+}
+
+.icon-box:hover .icon-box-content h4,
+.icon-box:hover .icon-box-content p {
+  color: white;
+}
+@media (max-width: 380px) {
+    header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        padding: 10px; /* Adjust padding for header */
+    }
+
+    .logo {
+        width: 100%; /* Make logo container full width */
+        justify-content: center; /* Center content */
+    }
+
+    .logo img {
+        width: 40%; /* Adjust image width for small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .logo h1 {
+        font-size: 6vw; /* Responsive font size for very small screens */
+        font-weight: bold; /* Make the logo heading bold */
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center the text */
+        white-space: nowrap; /* Prevent wrapping */
+        color: white; /* Text color */
+    }
+
+    .navigation {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center navigation items */
+        margin-top: 10px; /* Space below logo */
+    }
+
+    .navigation li {
+        padding: 5px 0; /* Space between items */
+    }
+
+}
+
+   
+
+@media (max-width: 400px) {
+    header .logo img {
+        width: 35%; /* Logo size for small screens */
+    }
+
+}-->
+
+.i1{
+  width:50px; height: 80px;;
+}
+</style>
+</head>
+
+<body>
+	<header id="header">
+    <div class="logo">
+      <a href="#"><img class="i1" src="logo.jpeg" alt="Vishvakannada" width="70px" height="50px"></a>
+      <h1>VishvaKannada</h1>
+    </div>
+    <div class="header-right"></div>
+    <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li> <a href="aboutus.html">About us</a></li>
+                    <li><a href="#">Projects</a>
+                      <ul style="background-color:white;">
+                          <li style="background-color:white;"><a href="Scratch.html" style="background-color:white;color:black">Scratch</a></li>
+                          <li  style="background-color:white;"><a href="klogo.html" style="background-color:white;color:black">Kannada logo</a></li>
+					          </ul>
+                  </li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="Donation.html" >Donate</a></li>  
+                    
+                    
+                 
+                  <li>
+                      <button id="screen-reader-button" tabindex="8"  >
+                      <i class="fas fa-volume-up"></i>
+                  </button></li>
+
+                 </ul>     			
+                 <div class="bars" id="bar">
+                  <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 100 80" width="30px" fill="#ffffff">
+                          <rect class="bar1" width="100" height="10"></rect>
+                          <rect class="bar2" y="25" width="100" height="10"></rect>
+                          <rect class="bar3" y="50" width="100" height="10"></rect>
+                        </svg>
+                      </div>
+            </div>
+  </header>
+
+  <!-- header-banner section -->
+  <div class="header-banner z-2 padding-small pt-0">
+    <section id="slider " style="margin-top: 140px;">
+      <img src="images/Pattern.png" alt="pattern" class="position-absolute z-1 d-md-block d-none"
+        style="bottom: -120px; left: 250px;">
+      <div class="swiper slider position-relative">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide d-flex"
+            style="background-image: url(Scratchlogo3.jpg); background-size: cover; background-repeat: no-repeat; height: 80vh; background-position: center; height: 80vh;">
+          </div>
+          <div class="swiper-slide d-flex"
+            style="background-image: url(ScratchCat1.webp); background-size: cover; background-repeat: no-repeat; height: 80vh; background-position: center; height: 80vh;">
+          </div>
+          <div class="swiper-slide d-flex"
+            style="background-image: url(header-img2.jpg); background-size: cover; background-repeat: no-repeat; height: 80vh; background-position: center; height: 80vh;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="z-3 position-absolute start-50 top-md-100 translate-middle">
+      <div class="container-md p-5 bg-md-white shadow p-3 mb-5 bg-body-tertiary">
+        <div class="p-3">
+          <h2 class="display-3 text-capitalize">Welcome to Scratch</h2>
+          <p class="text-secondary  d-md-block d-none">A creative coding playground!! Code in your native language!!</p>
+          <a href="Donation.html"  style="background-color:black;" class="btn btn-primary text-capitalize rounded-2 py-3 px-4 ">Donate</a>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- about-us section -->
+  <section id="about-us" style="padding-top:40px; class="padding-medium pb-0 mt-5">
+    <div class="container-md">
+      <div class="row flex-row-reverse align-items-center ">
+        <div class="col-lg-6">
+          <div class="image-holder text-end">
+            <img src="0780.jpg" alt="banner" class="img-fluid " style="padding-top:150px; ">
+          </div>
+        </div>
+        <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-right">
+          <div class="banner-content " style="padding-top:150px; ">
+            <p class="fw-medium text-primary sub-heading text-uppercase">What is Scratch?</p>
+            <h6 class="display-3">Free programming language taught in Kannada</h6>
+            <p class="text-secondary" style="font-size: 16px;">The Scratch teaching program ignited young minds in government schools, introducing them to the exciting world of coding. </p>
+            <a href="aboutus.html" class="btn btn-primary rounded-2 text-capitalize px-5 mt-2 mt-lg-3" style="background-color:black;">More about scratch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 middle divs -->
+  <section id="service" class="type-loan container-md padding-small" data-aos="fade-up">
+    <div class="container-sm banner-content align-items-center justify-content-center text-center mb-5">
+      <p class="fw-medium text-primary sub-heading text-uppercase">How we work</p>
+      <h6 class="display-3">Personal reaching out</h6>
+      <p class="text-secondary" style="font-size: 16px;"> We embark on a mission to ignite young minds with the spark of creativity.  <br> Scratch programming, transforming lines of code into vibrant animations and interactive games. The children's eyes lit up with wonder as they brought their imagination to life on the computer screen. <br>With the essence of Kannada we create a harmonious symphony of culture and innovation.</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="icon-box p-5 text-center border py-lg-7 px-3 rounded-3">
+          <div class="icon-box-icon mb-3">
+            <svg class="ballon" width="50" height="50">
+			<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24">
+ <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.583 7.238c3.007.53 4.799 1.639 5.417 2.276c.618-.637 2.41-1.746 5.418-2.276c1.523-.269 2.285-.403 2.933.112C21 7.864 21 8.7 21 10.372v6.007c0 1.529 0 2.293-.416 2.77c-.417.477-1.333.639-3.166.962c-1.635.288-2.91.747-3.833 1.208c-.909.454-1.363.681-1.585.681s-.677-.227-1.585-.68c-.923-.462-2.198-.921-3.832-1.21c-1.834-.322-2.75-.484-3.167-.961S3 17.908 3 16.379v-6.007C3 8.7 3 7.864 3.649 7.35c.648-.515 1.41-.38 2.933-.112M12 9v13M8.5 3.059a6.29 6.29 0 0 1 7 .01M13.622 5.5a3.14 3.14 0 0 0-3.244-.01" color="currentColor" />
+</svg>
+              <!--<use xlink:href="#dog"></use>-->
+            </svg>
+          </div>
+          <div class="icon-box-content ps-3">
+            <h4 class="display-6 fs-3 fw-medium text-capitalize" >Tutorials</h4>
+            <p >It involves basic syntaxes which beginners can incorporate.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="icon-box p-5 text-center border py-lg-7 px-3 rounded-3">
+          <div class="icon-box-icon mb-3">
+            <svg class="ballon" width="50" height="50">
+              <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24">
+	<path fill="currentColor" d="m9.6 15.6l1.4-1.45L8.85 12L11 9.85L9.6 8.4L6 12zm4.8 0L18 12l-3.6-3.6L13 9.85L15.15 12L13 14.15zM5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h4.2q.325-.9 1.088-1.45T12 1t1.713.55T14.8 3H19q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14V5H5zm7-14.75q.325 0 .538-.213t.212-.537t-.213-.537T12 2.75t-.537.213t-.213.537t.213.538t.537.212M5 19V5z" />
+</svg>
+            </svg>
+          </div>
+          <div class="icon-box-content ps-3">
+            <h4 class="display-6 fs-3 fw-medium text-capitalize">Instructions</h4>
+            <p> Explore a vast library of sprites, sounds, and backgrounds to customize your projects.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="icon-box p-5  px-lg-7 text-center border py-lg-7 px-3 rounded-3">
+          <div class="icon-box-icon mb-3">
+            <svg class="ballon" width="50" height="50">
+              <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24">
+	<g fill="none">
+		<path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" />
+		<path fill="currentColor" d="M18.296 3.045a1 1 0 0 1 .657.652l.03.119l1.341 7.154q.154.826.148 1.63l-.012.4H21a1 1 0 0 1 .117 1.993L21 15h-.894q-.164.531-.392 1.033l-.16.33l1.07.856a1 1 0 0 1-1.146 1.634l-.103-.072l-.936-.749A8.43 8.43 0 0 1 12 21a8.42 8.42 0 0 1-6.25-2.755l-.19-.213l-.935.749a1 1 0 0 1-1.343-1.477l.093-.085l1.07-.856a9 9 0 0 1-.435-1.012L3.894 15H3a1 1 0 0 1-.117-1.993L3 13h.54a8.5 8.5 0 0 1 .069-1.619l.067-.411l1.341-7.154a1 1 0 0 1 1.598-.604l.092.08l2.414 2.415a1 1 0 0 0 .576.284L9.828 6h4.344a1 1 0 0 0 .608-.206l.099-.087l2.414-2.414a1 1 0 0 1 1.003-.248m-.93 3.003L16.293 7.12a3 3 0 0 1-2.121.88H9.828a3 3 0 0 1-2.12-.879L6.632 6.048l-.992 5.29A6.5 6.5 0 0 0 5.545 13H7a1 1 0 1 1 0 2h-.492a.998.998 0 0 1 .71 1.696l-.095.086A6.44 6.44 0 0 0 12 19a6.43 6.43 0 0 0 4.696-2.02l.18-.2a1 1 0 0 1 .616-1.78H17a1 1 0 1 1 0-2h1.455a6.5 6.5 0 0 0-.096-1.662zm-3.472 9.005a1 1 0 0 1-.447 1.342l-.553.276a2 2 0 0 1-1.788 0l-.553-.276a1 1 0 0 1 .894-1.79l.553.277l.553-.276a1 1 0 0 1 1.341.447M9.5 10a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3m5 0a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3" />
+	</g>
+</svg>
+            </svg>
+          </div>
+          <div class="icon-box-content ps-3">
+            <h4 class="display-6 fs-3 fw-medium text-capitalize">Sprite Control</h4>
+            <p>Sprite is the cat. You can make it move a specific number of steps, glide smoothly to a new position, turn left or right, or even change its direction</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="icon-box p-5 text-center border py-lg-7 px-3 rounded-3">
+          <div class="icon-box-icon mb-3">
+            <svg class="ballon" width="50" height="50">
+             <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24">
+	<path fill="currentColor" d="m10.14 2.358l4.714 2.27l-.915 1.584a.27.27 0 0 0-.032.182l.607 3.441a.26.26 0 0 0 .093.16l2.676 2.245c.048.041.11.064.174.064h1.878l.507 2.22a.5.5 0 0 1-.095.415l-5.237 6.567a.5.5 0 0 1-.383.184h-8.4a.5.5 0 0 1-.383-.184L.107 14.939a.5.5 0 0 1-.095-.415l1.869-8.189a.5.5 0 0 1 .266-.333l7.567-3.644a.49.49 0 0 1 .426 0M7.244 16.626h1.667v-2.429l.64-.784l1.822 3.213h1.965l-2.594-4.273l2.462-3.169h-2.065l-1.689 2.473c-.166.265-.342.53-.508.817h-.033v-3.29H7.244zM19.281 2.352l2.975 1.083q.083.031.128.108l1.583 2.742c.029.05.039.108.029.165l-.55 3.118a.24.24 0 0 1-.083.145l-2.426 2.035a.25.25 0 0 1-.157.058h-3.166a.25.25 0 0 1-.158-.058l-2.425-2.035a.24.24 0 0 1-.084-.145l-.55-3.118a.24.24 0 0 1 .029-.165l1.583-2.742a.25.25 0 0 1 .129-.108l2.975-1.083a.24.24 0 0 1 .168 0m-.71 3.404q-.048-.138-.197-.137h-.487V8.57h.79V6.449q.132-.13.278-.2a.7.7 0 0 1 .312-.072q.223 0 .338.136q.114.136.114.382V8.57h.787V6.695q0-.246-.064-.452a1 1 0 0 0-.192-.355a.9.9 0 0 0-.313-.232a1.2 1.2 0 0 0-.697-.054a1.2 1.2 0 0 0-.436.203a2 2 0 0 0-.184.157z" />
+</svg>
+            </svg>
+          </div>
+          <div class="icon-box-content ps-3">
+            <h4 class="display-6 fs-3 fw-medium text-capitalize">Kannada guides</h4>
+            <p>Step blocks are written in Kannada language. These are simple blocks without any ambiguity
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Key features
+  <section id="choose-us" >
+    <div class="container-md">
+      <div class="row align-items-center ">
+         <!-- reasons to choose us section -->
+  <section id="choose-us" class="padding-small ">
+    <!--<div class="container-md">-->
+      <div class="row align-items-center ">
+        <div class="col-lg-6">
+          <div class="image-holder text-end">
+            <img src="st2.jpg" alt="Chidren-learning" class="img-fluid " style="height:800px; width:900px;">
+          </div>
+        </div>
+        <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
+          <div class="banner-content ">
+            <p class="fw-medium text-primary sub-heading text-uppercase">Workshop Objectives</p>
+            <h6 class="display-3">Developing Problem-Solving Skills</h6>
+            <p class="text-secondary pt-2" style="font-size: 16px;">Scratch encourages users to break down complex projects into smaller, manageable steps.
+This helps learners identify the core components of a problem and approach them systematically.</p>
+
+            <div class="check-box">
+
+              <p style="font-size: 16px;"> <span class="tick">
+                  <svg class="check-circle text-primary" width="25" height="25">
+                    <use xlink:href="#check-circle"></use>
+                  </svg>
+                </span>Scratch's interactive nature allows for experimentation and iteration.
+              </p>
+
+              <p style="font-size: 16px;"> <span class="tick">
+                  <svg class="check-circle text-primary" width="25" height="25">
+                    <use xlink:href="#check-circle"></use>
+                  </svg>
+                </span>This hands-on experience fosters a growth mindset and teaches the value of perseverance.
+              </p>
+              <p style="font-size: 16px;"> <span class="tick">
+                  <svg class="check-circle text-primary" width="25" height="25">
+                    <use xlink:href="#check-circle"></use>
+                  </svg>
+                </span>Scratch requires users to think logically and sequentially.It develops problem-solving skills and teaches resilience.
+
+
+              </p>
+              <p style="font-size: 16px;"> <span class="tick">
+                  <svg class="check-circle text-primary" width="25" height="25">
+                    <use xlink:href="#check-circle"></use>
+                  </svg>
+                </span>When projects don't work as expected, users need to identify and fix errors.
+This debugging process involves analyzing the code, testing different solutions, and learning from mistakes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+ 
+  <footer class="b" style="background-color:black; color:#E1D9D1; text-align:center; padding:20px;">
+    <p>Copyright &copy; 2024 VishvaKannada.com</p>
+    <a href="https://www.facebook.com/VishvaKannada" target="_blank">
+       <!-- <img src="D:\WTproject\images1.jfif" alt="Facebook Logo" style="height:55px;width:55px;">-->
+<p><i class="fa-brands fa-facebook-f"></i></a>
+<i class="fa-brands fa-instagram" style="padding:10px"></i>
+<i class="fa-brands fa-twitter"></i>
+<i class="fa-brands fa-linkedin"></i></p>
+<p><a href="contact.html">HOME</a> | <a href="project1(1).html">ABOUT US</a> | <a href="contact.html">PROJECTS</a> | <a href="contact.html">CONTACT US</a> | <a href="contact.html">DONATE</a> 
+    <p>Privacy Policy | Terms And Conditions</p>
+</footer>
+
+
+  <!-- Scripts ================================================== -->
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/plugins.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js">
+  
+  function mynav() {
+    let bar = document.getElementById("bar");
+    let nav = document.querySelector(".navigation");
+
+    // Toggle navigation menu visibility without changing the bars
+    bar.onclick = () => {
+        if (nav.style.right === "0%") {
+            nav.style.right = "-70%"; // Close the menu
+        } else {
+            nav.style.right = "0%"; // Open the menu
+        }
+    }
+}
+function mynav() {
+    let bar = document.getElementById("bar");
+    let nav = document.querySelector(".navigation");
+
+    // Toggle navigation menu visibility without changing the bars
+    bar.onclick = () => {
+        if (nav.style.right === "0%") {
+            nav.style.right = "-70%"; // Close the menu
+        } else {
+            nav.style.right = "0%"; // Open the menu
+        }
+    }
+}
+
+mynav();
+document.addEventListener("DOMContentLoaded", function() {
+    const dropdownToggles = document.querySelectorAll("header ul li");
+
+    dropdownToggles.forEach(function(toggle) {
+        toggle.addEventListener("click", function() {
+            // Close all other dropdowns
+            dropdownToggles.forEach(function(otherToggle) {
+                if (otherToggle !== toggle) {
+                    otherToggle.classList.remove("open");
+                }
+            });
+
+            // Toggle the clicked dropdown
+            toggle.classList.toggle("open");
+        });
+    });
+});
+let isSpeaking = false; // Track whether the speech synthesis is currently active
+    
+function readTextAloud() {
+   if (isSpeaking) {
+       window.speechSynthesis.cancel(); // Stop any ongoing speech
+       isSpeaking = false; // Update the state to not speaking
+   } else {
+       const textElements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span,a, button,span');
+       const utterance = new SpeechSynthesisUtterance();
+
+       // Combine text content of selected elements into a single string
+       utterance.text = Array.prototype.map.call(textElements, (element) => element.textContent).join(' ');
+       utterance.voice = window.speechSynthesis.getVoices()[0]; // Set the voice (default)
+       utterance.lang = 'en-US'; // Set language
+
+       // Event listener to update the speaking state when the speech starts or ends
+       utterance.onstart = function() {
+           isSpeaking = true; // Update state to speaking
+       };
+
+       utterance.onend = function() {
+           isSpeaking = false; // Update state to not speaking when finished
+       };
+
+       // Start speaking
+       window.speechSynthesis.speak(utterance);
+      }
+  }
+  const screenReaderButton = document.getElementById('screen-reader-button');
+  screenReaderButton.addEventListener('click', readTextAloud)
+
+
+ /* function mynav() {
+    let bar = document.getElementById("bar");
+    let nav = document.querySelector(".navigation");
+
+    // Toggle navigation menu visibility without changing the bars
+    bar.onclick = () => {
+        if (nav.style.right === "0%") {
+            nav.style.right = "-70%"; // Close the menu
+        } else {
+            nav.style.right = "0%"; // Open the menu
+        }
+    }
+}
+mynav();
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const dropdownToggles = document.querySelectorAll("header ul li");
+
+    dropdownToggles.forEach(function(toggle) {
+        toggle.addEventListener("click", function() {
+            // Close all other dropdowns
+            dropdownToggles.forEach(function(otherToggle) {
+                if (otherToggle !== toggle) {
+                    otherToggle.classList.remove("open");
+                }
+            });
+
+            // Toggle the clicked dropdown
+            toggle.classList.toggle("open");
+        });
+    });
+});*/
+
+
+  </script>
+</body>
+
+</html>

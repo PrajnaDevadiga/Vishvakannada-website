@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <style>
+	header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Keeps the logo on the left and items in the right */
+    padding: 15px 50px;
+	background-color: black;
+    z-index: 1111;
+}
+.header-right {
+    display: flex; 
+    align-items: center; 
+    margin-left: auto; /* This will push the entire container to the right */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    
+    margin-right: 15px; /* Space between logo and text */
+}
+
+header .logo h1 {
+    font-size: 30px;
+	background: linear-gradient(90deg, #FFDD00, #FF0000); /* Yellow to Red */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Dancing Script', cursive; /* Casual handwritten font */
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 4px #0a0a0a66;
+    margin: 0;
+}
+header ul {
+    display: flex;
+    margin: 0;
+    padding-left: 20px; /
+    margin-left: auto;/* Space between logo section and navigation */
+}
+
+
+
+header ul li {
+    position: relative; /* Add this line */
+    padding: 0 15px;
+}
+
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+  display: block;
+    transition: .4s;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+
+
+header ul li ul {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f7f7f7; /* Matches the header background */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 10px 0;
+    width: 250px;
+    z-index: 999; /* Ensures it stays above other content */
+    border-radius: 4px; /* Add slight roundness to the dropdown */
+}
+
+header ul li ul li {
+    width: 100%;
+}
+
+header ul li ul li a {
+    padding: 10px 20px;
+    white-space: nowrap;
+    color: #333;
+}
+
+/* Remove underline or border from dropdown items */
+header ul li ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color:black;
+}
+
+/* Show the dropdown on hover */
+header ul li:hover ul {
+    display: block;
+}
+header ul li .donate:hover {
+    background-color: #a3141b;
+}
+header ul li a:hover {
+    color:#e0e0e0;
+}
+header .bars {
+    display:none;
+    color:white;
+}
+header.active{
+    background-color:black;
+    box-shadow: 1px 0px 0px #dddd;
+}
+header.active .logo a{
+    color: black;
+}
+header .active ul{
+    color:black;
+}
+
+
+@media(max-width: 991px) {
+    .big-bg {
+        background-image: url('head2.jpg'); /* Replace with your image URL */
+        background-size: cover; /* Ensures the image covers the entire area */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    }
+    
+    header .navigation {
+        position: absolute;
+        top: 60px; /* Position below the header */
+        right: -100%; /* Start hidden */
+        width: 50%; /* Adjust width for mobile */
+        height: calc(100vh - 60px); /* Full height minus header */
+        background-color: black; /* Background color */
+        display: flex;
+        flex-direction: column;
+		background-color: black;
+        justify-content: flex-start; /* Align items at the top */
+        align-items: center;
+        transition: right 0.5s ease; /* Smooth transition */
+        box-shadow: -1px 0px 0px #dd;
+    }
+    
+    header .navigation li {
+        margin: 11px 0;
+        width: 100%; /* Full width for mobile */
+        text-align: center; /* Center text */
+    }
+    header {
+        width: 100%;
+        max-width: 1200px; /* Set a maximum width for the header */
+        margin: 0 auto; /* Center the header */
+		
+    }
+    
+    header .navigation {
+        max-width: 100%; /* Ensure the navigation doesn't exceed header width */
+    }
+    
+    /* Adjust padding or margin for the navigation items if necessary */
+    header ul {
+        padding: 0 20px; /* Add horizontal padding */
+    }
+    
+    header ul li {
+        padding: 0 15px; /* Space between menu items */
+    }
+    header ul li a:hover {
+        color:#cac2c2;
+    }
+    header .navigation li a {
+        color: #fff;
+        padding: 15px 0; /* Padding for clickable area */
+        width: 100%; /* Make links full width */
+    }
+
+    header .bars {
+        display: block; 
+        z-index:-1;/* Show hamburger menu */
+    }
+
+    /* Dropdown styles for mobile */
+    header ul li ul {
+        position: absolute; /* Dropdown position */
+        top: 100%; /* Position below parent */
+        left: 0; /* Align to left */
+        width: 100%; /* Full width */
+        display: none; /* Hide dropdown by default */
+    }
+
+    /* Show dropdown on hover */
+    header ul li:hover ul {
+        display: block; /* Show dropdown on hover */
+    }
+    header ul li:hover ul {
+        display: block; /* Show dropdown on hover */
+        background-color:black ;
+         /* Match the main header color */
+    }
+    header ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none; /* Keep it hidden initially */
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+
+    header ul li.open ul {
+        display: block; /* Open the dropdown when the class 'open' is added */
+		background-color:BLACK;
+    }
+
+
+    header ul li ul li a {
+        color:rgba(255, 255, 255, 0.2); /* Set dropdown text color to white */
+    }
+    
+    /* Optionally, add hover effect for dropdown items */
+    header ul li ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color:#e0e0e0 /* Light hover effect */
+    }
+    
+}
+
+@media (max-width: 380px) {
+    header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        padding: 10px; /* Adjust padding for header */
+    }
+
+    .logo {
+        width: 100%; /* Make logo container full width */
+        justify-content: center; /* Center content */
+    }
+
+    .logo img {
+        width: 40%; /* Adjust image width for small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .logo h1 {
+        font-size: 6vw; /* Responsive font size for very small screens */
+        font-weight: bold; /* Make the logo heading bold */
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center the text */
+        white-space: nowrap; /* Prevent wrapping */
+        color: white; /* Text color */
+    }
+
+    .navigation {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center navigation items */
+        margin-top: 10px; /* Space below logo */
+    }
+
+    .navigation li {
+        padding: 5px 0; /* Space between items */
+    }
+
+}
+
+   
+
+@media (max-width: 400px) {
+    header .logo img {
+        width: 35%; /* Logo size for small screens */
+    }
+
+}
+	 * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+       body {
+	   font-size:20px;
+    background: #f7f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes the full height of the viewport */
+    margin: 0; /* Remove default body margin */
+}
+
+        .container {
+    font-family: sans-serif;
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 15px;
+    background: #E8E8E8;
+    padding: 60px;
+    margin: 20px auto; /* Center the container */
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    flex-grow: 1; /* Allow the container to take available space */
+    margin-bottom: 0;
+}
+
+       footer {
+    background-color: black;
+    color: #E1D9D1;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: 30px; /* Push the footer to the bottom */
+    position: relative; /* Ensure footer stays where it's supposed to */
+}
+        .form-section {
+            flex: 1;
+            padding: 20px;
+            margin-right: 20px;
+            border-right: 2px solid #ccc;
+        }
+        .info-section {
+            flex: 1;
+            padding: 20px;
+        }
+        .label {
+            font-size: 25px;
+            margin-top: 10px; 
+        }
+        .input-field {
+            width: 95%;
+            padding: 20px;
+            margin: 5px 0;
+            height: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .form-group {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+        .required {
+            color: red;
+            font-size: 0.9em;
+            margin-left: 5px;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        .submit-button {
+            background-color: black;
+            color: white;
+            width: 80px;
+            height: 50px;
+            margin-top: 10px;
+        }
+        h1 {
+            font-size: 36px;
+            padding: 16px;
+            margin: 0;
+        }
+        .info-content {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        #map {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+		.b {
+            
+    padding-top: 10px;
+    font-size: 20px;
+    border-top: 1px solid #444;
+}
+
+.b p {
+    margin: 0;
+}
+.b a{
+    text-decoration: none;
+    color:white;
+}
+.b a:hover{
+    color: #473738;
+}
+		 .b {
+            
+    padding-top: 10px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+}
+ footer a {
+            color: #E1D9D1;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        footer .social-icons i {
+            padding: 10px;
+            cursor: pointer;
+            color: #E1D9D1;
+        }
+
+.b p {
+    margin: 0;
+}
+		
+
+   footer {
+            background-color: black;
+            color: #E1D9D1;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+        footer a {
+            color: #E1D9D1;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        footer .social-icons i {
+            padding: 10px;
+            cursor: pointer;
+            color: #E1D9D1;
+			margin-bottom:0px;
+        }
+
+@media (max-width: 400px) {
+    header .logo img {
+        width: 35%; /* Logo size for small screens */
+    }
+
+}
+/* Default styles remain unchanged */
+
+/* Tablet view (between 481px and 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .container {
+        flex-direction: column; /* Stack form and info sections */
+        padding: 10px; /* Add some padding 
+    }
+
+    .form-section,
+    .info-section {
+        margin-right: 0; /* Remove right margin */
+        border-right: none; /* Remove the border */
+    }
+
+    .info-section {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .input-field {
+        padding: 15px; /* Adjust input field padding */
+        font-size: 16px; /* Adjust font size for readability */
+    }
+
+    .submit-button {
+        width: 100%; /* Full width for button */
+        height: 45px; /* Adjust height */
+    }
+
+    footer {
+        padding: 15px; /* Adjust footer padding */
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+/* Mobile view (480px and below) */
+@media (max-width: 480px) {
+    header {
+        padding: 5px; /* Further reduce padding */
+        text-align: center; /* Center text in header */
+    }
+
+    header h1 {
+        font-size: 24px; /* Smaller logo font size */
+    }
+
+    .logo img {
+        width: 50%; /* Adjust logo size */
+    }
+
+    .container {
+        padding: 10px; /* Reduce container padding */
+    }
+
+    .form-section,
+    .info-section {
+        width: 100%; /* Full width for sections */
+        margin: 0; /* Remove margin */
+        border: none; /* Remove borders */
+    }
+
+    .input-field {
+        padding: 10px; /* Smaller input padding */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .submit-button {
+        height: 40px; /* Adjust button height */
+    }
+
+    footer {
+        padding: 10px; /* Reduce footer padding */
+        font-size: 12px; /* Smaller footer font size */
+    }
+}
+/*screen reader */
+#screen-reader-button {
+            background: none;
+            color: white; 
+            border: none;
+            padding: 5px 15px; 
+            border-radius: 50%;
+            cursor: pointer; 
+            transition: background-color 0.3s ease;
+        }
+
+        #screen-reader-button:focus{
+            outline: none; /* Remove default focus outline */
+        }
+
+        #screen-reader-button:hover {
+          color:yellow ;
+        }
+
+        #screen-reader-button i {
+            font-size: 1.5rem; /* Icon size */
+            vertical-align: middle; /* Center the icon */
+        }
+    </style>
+</head>
+<body>
+<header id="header">
+    <div class="logo">
+      <a href="#"><img src="logo.jpeg" alt="FurnitureLogo" width="70px" height="50px"></a>
+      <h1>VishvaKannada</h1>
+    </div>
+    <div class="header-right"></div>
+    <ul class="navigation">
+                    <li style="font-size:17px;"><a href="index.html">Home</a></li>
+                    <li style="font-size:17px;"> <a href="aboutus.html">About us</a></li>
+                    <li style="font-size:17px;"><a href="#">Projects</a>
+                      <ul>
+                          <li style="font-size:17px;"><a href="Scratch.html">Scratch</a></li>
+                          <li style="font-size:17px;"><a href="klogo.html">Kannada logo</a></li>
+					          </ul>
+                  </li>
+                    <li style="font-size:17px;"><a href="contact.html">Contact us</a></li>
+                    <li style="font-size:17px;"><a href="donation.html" >Donate</a></li>  
+                    
+                    
+                 
+                  <li>
+                      <button id="screen-reader-button" tabindex="8"  >
+                      <i class="fas fa-volume-up"></i>
+                  </button></li>
+
+                 </ul>     			
+                 <div class="bars" id="bar">
+                  <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 100 80" width="30px" fill="#ffffff">
+                          <rect class="bar1" width="100" height="10"></rect>
+                          <rect class="bar2" y="25" width="100" height="10"></rect>
+                          <rect class="bar3" y="50" width="100" height="10"></rect>
+                        </svg>
+                      </div>
+            </div>
+  </header>
+
+
+  <script src="main.js"></script>
+    <div class="container">
+        <div class="form-section">
+            <h1>Send Us a Message</h1>
+            <p style="font-size: 20px; margin-top:10px">Fill the Details</p>
+            <form onsubmit="querypage(event)">
+                <div class="form-group">
+                    <label for="name" class="label" style="font-size: 20px;">
+    Name<span class="required">*</span>
+</label>
+<input type="text" id="name" name="name" accesskey="N" placeholder="Enter Your Name" class="input-field" required>
+<div id="nameError" class="error"></div>
+                    <label for="mname" class="label" style="font-size: 20px;">Middle Name</label>
+                    <input type="text" id="mname" name="mname" accesskey="M" placeholder="Enter Your Middle Name" class="input-field">
+
+                    <label for="lname" class="label"style="font-size: 20px;">Last Name<span class="required">*</span></label>
+                    <input type="text" id="lname" name="lname" accesskey="L" placeholder="Enter Your Last Name" class="input-field" required>
+                    <div id="lnameError" class="error"></div>
+
+                    <label for="pno" class="label"style="font-size: 20px;">Phone Number<span class="required">*</span></label>
+                    <input type="tel" id="pno" name="pno" accesskey="P" placeholder="Enter Your Phone Number" class="input-field" required>
+                    <div id="phoneError" class="error"></div>
+
+                    <label for="email" class="label" style="font-size: 20px;">Email Id<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" accesskey="E"  placeholder="Enter Your Email" class="input-field" required>
+                    <div id="emailError" class="error"></div>
+
+                    <input type="submit" value="Submit" class="submit-button">
+                </div>
+            </form>
+        </div>
+        <div class="info-section">
+            <h1>Drop Us a Line</h1>
+            <div class="info-content">
+			<i class="fa-solid fa-location-dot"></i><span style="margin-left: 10px; font-size: 18px;">A-15,1st floor, FIEE complex, Okhla Industrial Area, Phase 2, Bangalore - 110020</span><br>
+                <br><p><i class="fa-solid fa-envelope"></i> <span style="margin-left: 10px;font-size: 18px;">vishwakannada@gmail.com</span></p><br>
+                <p><i class="fa-solid fa-phone"></i><span style="margin-left: 10px; font-size: 18px;"> +91 9876543210</span></p>
+            </div><br>
+            <div id="map">
+                <!-- Here you can integrate a map using an iframe or a map library -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1563647.4040869285!2d77.40479362636337!3d12.971598284942998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16805270cf01%3A0x45cf7897dff1c9cf!2sBengaluru%2C%20Karnataka%2C%20India!5e0!3m2!1sen!2sus!4v1695793488604!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+	<footer>
+        <p>Copyright &copy; 2024 VishvaKannada.com</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/VishvaKannada" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <i class="fa-brands fa-instagram" style="padding:10px"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <p><a href="index.html">HOME</a> | <a href="aboutus.html">ABOUT US</a> | <a href="contact.html">PROJECTS</a> | <a href="contact.html">CONTACT US</a> | <a href="donation.html">DONATE</a></p>
+<br><p>Privacy Policy | Terms And Condition</p>
+    </footer>
+
+    <script>
+        function querypage(event) {
+            event.preventDefault();
+            clearErrorMessages();
+
+            if (validation()) {
+                // Redirect to the home page if validation passes
+                window.location.href = "index.html"; // Change to your home page URL
+            }
+        }
+
+        function validation() {
+            return validateName() && validateLname() && validatePhone() && validateEmail();
+        }
+
+        function validateName() {
+            const name = document.getElementById("name").value.trim();
+            const patName = /^[A-Za-z\s]+$/;
+            const nameError = document.getElementById("nameError");
+
+            if (name === "") {
+                nameError.textContent = "Name is required.";
+                return false;
+            }
+            if (!patName.test(name)) {
+                nameError.textContent = "Invalid name! Only alphabets are allowed.";
+                return false;
+            }
+            return true;
+        }
+
+        function validateLname() {
+            const lname = document.getElementById("lname").value.trim();
+            const patName = /^[A-Za-z\s]+$/;
+            const lnameError = document.getElementById("lnameError");
+
+            if (lname === "") {
+                lnameError.textContent = "Last name is required.";
+                return false;
+            }
+            if (!patName.test(lname)) {
+                lnameError.textContent = "Invalid last name! Only alphabets are allowed.";
+                return false;
+            }
+            return true;
+        }
+
+        function validatePhone() {
+            const pno = document.getElementById("pno").value.trim();
+            const patPhone = /^[6-9]\d{9}$/;
+            const phoneError = document.getElementById("phoneError");
+
+            if (pno === "") {
+                phoneError.textContent = "Phone number is required.";
+                return false;
+            }
+            if (!patPhone.test(pno)) {
+                phoneError.textContent = "Invalid phone number! Must be a 10-digit number starting with 6-9.";
+                return false;
+            }
+            return true;
+        }
+
+        function validateEmail() {
+            const email = document.getElementById("email").value.trim();
+            const patEmail = /^(\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*)$/;
+            const emailError = document.getElementById("emailError");
+
+            if (email === "") {
+                emailError.textContent = "Email is required.";
+                return false;
+            }
+            if (!patEmail.test(email)) {
+                emailError.textContent = "Invalid email format. Ex: example@gmail.com";
+                return false;
+            }
+            return true;
+        }
+		function querypage(event) {
+        event.preventDefault();
+        clearErrorMessages();
+
+        if (validation()) {
+            // Show an alert message
+            alert("Your message has been sent successfully!");
+
+            // Redirect to the home page if validation passes
+            window.location.href = "index.html"; // Change to your home page URL
+        }
+    }
+
+
+        function clearErrorMessages() {
+            document.getElementById('nameError').textContent = '';
+            document.getElementById('lnameError').textContent = '';
+            document.getElementById('phoneError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+        }
+    </script>
+	
+
+</body>
+</html>

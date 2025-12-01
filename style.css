@@ -1,0 +1,1156 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fenix&display=swap");
+
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style:none;
+    font-family: 'Poppins',sans-serif;
+}
+html{
+    height: 2000px;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+	
+    justify-content: space-between; /* Keeps the logo on the left and items in the right */
+    padding: 15px 50px;
+    z-index: 1111;
+}}
+.header-right {
+    display: flex; 
+    align-items: center; 
+    margin-left: auto; /* This will push the entire container to the right */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    
+    margin-right: 15px; /* Space between logo and text */
+}
+
+header .logo h1 {
+    font-size: 30px;
+	background: linear-gradient(90deg, #FFDD00, #FF0000); /* Yellow to Red */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Dancing Script', cursive; /* Casual handwritten font */
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 4px #0a0a0a66;
+    margin: 0;
+}
+header ul {
+    display: flex;
+    margin: 0;
+    padding-left: 20px; /
+    margin-left: auto;/* Space between logo section and navigation */
+}
+
+
+
+header ul li {
+    position: relative; /* Add this line */
+    padding: 0 15px;
+}
+
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+  display: block;
+    transition: .4s;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+
+
+header ul li ul {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f7f7f7; /* Matches the header background */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 10px 0;
+    width: 250px;
+    z-index: 999; /* Ensures it stays above other content */
+    border-radius: 4px; /* Add slight roundness to the dropdown */
+}
+
+header ul li ul li {
+    width: 100%;
+}
+
+header ul li ul li a {
+    padding: 10px 20px;
+    white-space: nowrap;
+    color: #333;
+}
+
+/* Removenderline or border from dropdown items */
+header ul li ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color:black;
+}
+
+/* Show the dropdown on hover */
+header ul li:hover ul {
+    display: block;
+}
+header ul li .donate:hover {
+    background-color: #a3141b;
+}
+header ul li a:hover {
+    color:#473738;
+}
+header .bars {
+    display:none;
+    color:white;
+}
+header.active{
+    background-color:black;
+    box-shadow: 1px 0px 0px #473738;
+}
+header.active .logo a{
+    color: black;
+}
+header .active ul{
+    color:black;
+}
+
+/*screen reader */
+#screen-reader-button {
+    background: none;
+    color: white; 
+    border: none;
+    padding: 5px 15px; 
+    border-radius: 50%;
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+}
+
+#screen-reader-button:focus{
+    outline: none; /* Remove default focus outline */
+}
+
+#screen-reader-button:hover {
+  color:yellow ;
+}
+
+#screen-reader-button i {
+    font-size: 1.5rem; /* Icon size */
+    vertical-align: middle; /* Center the icon */
+        }
+@media(max-width: 991px) {
+    .big-bg {
+        background-image: url('head2.jpg'); /* Replace with your image URL */
+        background-size: cover; /* Ensures the image covers the entire area */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    }
+    
+    header .navigation {
+        position: absolute;
+        top: 60px; /* Position below the header */
+        right: -100%; /* Start hidden */
+        width: 50%; /* Adjust width for mobile */
+        height: calc(100vh - 60px); /* Full height minus header */
+        background-color: black; /* Background color */
+        display: flex;
+        flex-direction: column;
+		background-color: black;
+        justify-content: flex-start; /* Align items at the top */
+        align-items: center;
+        transition: right 0.5s ease; /* Smooth transition */
+        box-shadow: -1px 0px 0px #dd;
+    }
+    
+    header .navigation li {
+        margin: 11px 0;
+        width: 100%; /* Full width for mobile */
+        text-align: center; /* Center text */
+    }
+    header {
+        width: 100%;
+        max-width: 1200px; /* Set a maximum width for the header */
+        margin: 0 auto; /* Center the header */
+		
+    }
+    
+    header .navigation {
+        max-width: 100%; /* Ensure the navigation doesn't exceed header width */
+    }
+    
+    /* Adjust padding or margin for the navigation items if necessary */
+    header ul {
+        padding: 0 20px; /* Add horizontal padding */
+    }
+    
+    header ul li {
+        padding: 0 15px; /* Space between menu items */
+    }
+    header ul li a:hover {
+        color:#cac2c2;
+    }
+    header .navigation li a {
+        color: #fff;
+        padding: 15px 0; /* Padding for clickable area */
+        width: 100%; /* Make links full width */
+    }
+
+    header .bars {
+        display: block; 
+        z-index:-1;/* Show hamburger menu */
+    }
+
+    /* Dropdown styles for mobile */
+    header ul li ul {
+        position: absolute; /* Dropdown position */
+        top: 100%; /* Position below parent */
+        left: 0; /* Align to left */
+        width: 100%; /* Full width */
+        display: none; /* Hide dropdown by default */
+    }
+
+    /* Show dropdown on hover */
+    header ul li:hover ul {
+        display: block; /* Show dropdown on hover */
+    }
+    header ul li:hover ul {
+        display: block; /* Show dropdown on hover */
+        background-color:black ;
+        color:#473738;
+         /* Match the main header color */
+    }
+    header ul li a:hover ul {
+        display: block; /* Show dropdown on hover */
+        background-color:black ;
+        color:#473738;
+         /* Match the main header color */
+    }
+    header ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none; /* Keep it hidden initially */
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+
+    header ul li.open ul {
+        display: block; /* Open the dropdown when the class 'open' is added */
+		background-color:BLACK;
+    }
+
+
+    header ul li ul li a {
+        color:rgba(255, 255, 255, 0.2); /* Set dropdown text color to white */
+    }
+    
+    /* Optionally, add hover effect for dropdown items */
+    header ul li ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color:#473738 /* Light hover effect */
+    }
+    
+}
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero .bg-link {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
+
+
+/* For large tablets and small laptops */
+@media (max-width: 1024px) {
+    .hero {
+        background-size: cover;
+        height: 90vh; /* Adjust height for tablets */
+        background-position: center;
+    }
+}
+
+/* For tablets in portrait mode */
+@media (max-width: 768px) {
+    .hero {
+        background-size: cover;
+        height: 80vh;
+        background-position: center;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .hero {
+        background-size: cover;
+        height: 60vh;
+        background-position: center;
+    }
+}
+
+.
+
+@media (max-width: 600px) {
+    .hero .carousel-container h2 {
+        font-size: 8vw; /* Adjust font size for smaller screens */
+    }
+    .hero .carousel-container  p {
+        font-size: 3vw; /* Adjust font size for larger screens */
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    .hero .carousel-container h2 {
+        font-size: 3vw; /* Adjust font size for larger screens */
+    }
+    .hero .carousel-container  p {
+        font-size: 1vw; /* Adjust font size for larger screens */
+    }
+}
+@media (max-width: 380px) {
+    header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        padding: 10px; /* Adjust padding for header */
+    }
+
+    .logo {
+        width: 100%; /* Make logo container full width */
+        justify-content: center; /* Center content */
+    }
+
+    .logo img {
+        width: 40%; /* Adjust image width for small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .logo h1 {
+        font-size: 6vw; /* Responsive font size for very small screens */
+        font-weight: bold; /* Make the logo heading bold */
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center the text */
+        white-space: nowrap; /* Prevent wrapping */
+        color: white; /* Text color */
+    }
+
+    .navigation {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center navigation items */
+        margin-top: 10px; /* Space below logo */
+    }
+
+    .navigation li {
+        padding: 5px 0; /* Space between items */
+    }
+
+}
+   
+
+@media (max-width: 400px) {
+    header .logo img {
+        width: 35%; /* Logo size for small screens */
+    }
+
+}
+
+@media (max-width: 768px) {
+    .big-bg {
+        background-image: url("give1.jpg"); 
+        background-size: contain;/* Use a different image for tablets if needed */
+        height: 80vh; /* Adjust height for tablets */
+    }
+}
+
+/* Media query for mobile phones */
+@media (max-width: 480px) {
+    .big-bg {
+        background-image: url("give1.jpg"); /* Use a different image for mobile if needed */
+        height: 60vh; /* Adjust height for mobile */
+    }
+}/* General Hero Section Styling */
+
+/* Main Heading Styling */
+.main-heading {
+    font-size: 48px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Main Section Styling */
+/* Ensure Hero Section Sits Above */
+.hero {
+    position: relative;
+    z-index: 10; /* Ensure hero is on top */
+    min-height: 100vh;
+    padding: 0;
+}
+
+/* Animated Section - Positioned Below Hero */
+.animated-section {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    position: relative;
+    z-index: 1;
+    margin-top: 100px; /* Ensures it starts below hero */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Main Heading Styling */
+.main-heading {
+    font-size: 48px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Animated Container and Content */
+.animated-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animated-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    box-shadow: 0 4px 15px rgba(224, 222, 221, 0.3);
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 700px;
+    color: white;
+    margin-top: 20px;
+}
+
+.animated-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animated-heading {
+    font-size: 36px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.animated-content p {
+    font-size: 18px;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .main-heading {
+        font-size: 40px;
+    }
+
+    .animated-container,
+    .animated-content {
+        width: 90%;
+    }
+
+    .animated-heading {
+        font-size: 30px;
+    }
+
+    .animated-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 32px;
+    }
+
+    .animated-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .animated-heading {
+        font-size: 26px;
+    }
+
+    .animated-content p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-heading {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    .animated-content {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .animated-heading {
+        font-size: 22px;
+    }
+
+    .animated-content p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .main-heading {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .animated-content {
+        padding: 10px;
+    }
+
+    .animated-heading {
+        font-size: 20px;
+    }
+
+    .animated-content p {
+        font-size: 12px;
+    }
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+.hero {
+    margin-bottom: 0; /* Remove any potential margin at the bottom */
+    padding-bottom: 0;
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+}
+
+/* Animated Section - Flush with Hero */
+.animated-section {
+    margin-top: 0; /* Remove any gap at the top */
+    padding-top: 0;
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+}
+
+
+
+
+
+.hero .carousel-item {
+    position: absolute;
+    inset: 0;
+    background-image: url('girl1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+.hero .carousel {
+    width: 100%;
+    min-height: calc(100vh - 90px);
+    padding: 0;
+    margin: 0;
+    background-color: rgba(240, 240, 240, 0.8);
+    position: relative;
+}
+
+.hero img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero .carousel-item:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+.hero .carousel-container {
+    position: absolute;
+    inset: 90px 20px 64px 20px; /* Adjusted for better responsiveness */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+    text-align: center;
+}
+
+.hero h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    animation: fadeInDown 1s both;
+    color: #fff;
+}
+
+.hero p {
+    animation: fadeInDown 1s both 0.2s;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.hero .bg-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 18px;
+    border: 2px solid #fff;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: color 0.4s ease;
+}
+
+.hero .bg-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: grey;
+    width: 100%;
+    height: 100%;
+    transition: left 0.4s ease-in-out;
+    z-index: -1;
+}
+
+.hero .bg-link:hover::before {
+    left: 0;
+}
+
+.hero .bg-link:hover {
+    color: #000;
+}
+
+/* Tablet view adjustments */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .hero .bg-link {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Mobile view adjustments */
+@media (max-width: 500px) {
+    .hero h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    .hero p {
+        font-size: 0.9rem;
+    }
+    .hero .bg-link {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+
+/* Very small screens (below 400px) */
+@media (max-width: 400px) {
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+    .hero p {
+        font-size: 0.8rem;
+    }
+    .hero .bg-link {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+    }
+}
+
+/* Extra small screens (below 300px) */
+@media (max-width: 300px) {
+    .hero h2 {
+        font-size: 1.1rem;
+    }
+    .hero p {
+        font-size: 0.7rem;
+    }
+    .hero .bg-link {
+        font-size: 0.6rem;
+        padding: 3px 8px;
+    }
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+    .hero .bg-link a {
+        font-size: 3vw; /* Responsive font size */
+        padding: 4px 8px;/* Reduce padding more */
+    }
+}
+.main-heading {
+    font-size: 48px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.big-collection {
+    padding: 20px;
+    margin-bottom: 40px;
+   
+    
+}
+.portfolio .portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio .portfolio-item .portfolio-info {
+    opacity: 0;
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: -100%;
+    z-index: 3;
+    transition: all ease-in-out 0.5s;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+}
+
+/* Hover effect for desktop view */
+.portfolio .portfolio-item:hover .portfolio-info {
+    opacity: 1;
+    bottom: 0;
+}
+
+/* Mobile and tablet view - show .portfolio-info by default */
+@media (max-width: 768px) {
+    .portfolio .portfolio-item .portfolio-info {
+        opacity: 1;
+        bottom: 0;
+        position: relative;
+        background: rgba(0, 0, 0, 0.8); /* Dark background for better readability */
+        transition: none; /* Disable transition on smaller screens */
+    }
+
+    .portfolio .portfolio-item .portfolio-info h4 {
+        font-size: 16px;
+    }
+}
+.portfolio .portfolio-item {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio .portfolio-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Show info only on hover for desktop and larger devices */
+.portfolio .portfolio-item .portfolio-info {
+    opacity: 0;
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: -100%;
+    z-index: 3;
+    transition: all ease-in-out 0.5s;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+}
+
+.portfolio .portfolio-item:hover .portfolio-info {
+    opacity: 1;
+    bottom: 0;
+}
+
+/* Tablet view - two items per row, maintain hover effect */
+@media (max-width: 991px) {
+    .portfolio .portfolio-item {
+        width: 48%; /* Two items per row */
+        margin: 1%; /* Small margin for spacing */
+    }
+
+    /* Keep hover effect on tablet view */
+    .portfolio .portfolio-item .portfolio-info {
+        opacity: 0;
+        bottom: -100%;
+    }
+
+    .portfolio .portfolio-item:hover .portfolio-info {
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+/* Mobile view - one item per row, keep hover effect */
+@media (max-width: 575px) {
+    .portfolio .portfolio-item {
+        width: 100%; /* Full width for one item per row */
+         /* Adjust spacing for mobile */
+    }
+
+    /* Ensure hover effect for mobile */
+    .portfolio .portfolio-item .portfolio-info {
+        opacity: 0;
+        bottom: -100%;
+    }
+
+    .portfolio .portfolio-item:hover .portfolio-info {
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+  
+.get-involved h1 {
+    font-size: 48px; /* Large size to grab attention */
+   
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the heading */
+    text-transform: uppercase; /* Capitalize all letters for impact */
+    letter-spacing: 2px; /* Add some space between letters */
+    margin-bottom: 30px; /* Space below the heading */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.get-involved h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color:black; /* Accent color matching the text */
+    margin: 10px auto 0 auto; /* Center the line below the heading */
+    border-radius: 2px; /* Round the edges of the line */
+}
+
+.big-collection h1 {
+    font-size: 48px; /* Large size to grab attention */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the heading */
+    text-transform: uppercase; /* Capitalize all letters for impact */
+    letter-spacing: 2px; /* Add some space between letters */
+    margin-bottom: 30px; /* Space below the heading */
+    text-shadow: 2px 2px 5px rgba(1, 1, 1, 0.1); /* Soft shadow for depth */
+}
+
+.big-collection h1::after {
+     content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color:black; /* Accent color matching the text */
+    margin: 10px auto 0 auto; /* Center the line below the heading */
+    border-radius: 2px; /* Round the edges of the line */
+}
+/* Flex container for the images */
+.collect-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items horizontally */
+}
+
+/* Individual collect div */
+.collect {
+    flex: 1 1 calc(33.33% - 20px); /* Default to 3 per row */
+    margin: 10px;
+    text-align: center;
+    max-width: calc(33.33% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+
+/* Image inside each collect */
+.card .image {
+    width: 100%;
+    height: 200px; /* Fixed height for the images */
+    object-fit: contain; /* Ensure images are not stretched and fit nicely */
+    background-color: white; /* Set background to white */
+    padding: 10px; /* Optional: Adds padding to make the white background more visible */
+    border-radius: 4px; /* Optional: Adds a bit of rounding to match card styles */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
+}
+.card  a{
+    color:white;
+    background-color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Responsive Styles */
+
+/* For tablets (2 columns layout) */
+
+        @media (max-width: 768px) {
+            .collect {
+                flex: 1 1 calc(50% - 20px); /* 2 per row */
+                max-width: calc(50% - 20px);
+            }
+        
+    
+    .collect-flex {
+        justify-content: center; /* Center the images properly on tablet */
+    }
+}
+
+/* For mobile (1 column layout) */
+@media (max-width: 576px) {
+    .collect {
+        flex: 1 1 100%; /* 1 per row */
+        max-width: 100%;
+    }
+    .collect-flex {
+        justify-content: center; /* Ensure centered layout on mobile */
+    }
+}
+
+
+
+/* Ensure the cards section also stays responsive */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center cards horizontally */
+   
+}
+
+
+
+/* Ensure card styling remains consistent */
+.card {
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    margin: 10px;
+    width: calc(33.33% - 20px); /* Default to 3 per row */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.card a{
+    background-color: white;
+    color:black;
+}
+.image a{
+    background-color: black;
+    color:white;
+}
+
+/* Cards animation */
+.card {
+    opacity: 1;
+    transform: translateY(50px); /* Initially positioned lower */
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.card.animate {
+    opacity: 1;
+    transform: translateY(0); /* Move to the original position */
+}
+
+/* Collection items (images) animation */
+.collect {
+    opacity: 1;
+    transform: translateY(50px); /* Initially positioned lower */
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.collect.animate {
+    opacity: 1;
+    transform: translateY(0); /* Move to the original position */
+}
+
+/* Cards and images initial state */
+.card {
+    opacity: 1;
+    transform: translateY(50px); /* Initially positioned lower */
+   transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+
+/* Cards and images when in view */
+.card.animate, .card img.animate {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+}
+
+.card a:hover{
+    background-color: #e7dede;
+}
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(167, 157, 157, 0.2);
+}
+.collect:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+}
+.collect a:hover{
+    text-decoration: underline;
+}
+/* Responsive card layout for tablets (2 columns) */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* 2 per row */
+    }
+    .cards {
+        justify-content: center; /* Center cards horizontally on tablet */
+    }
+}
+
+/* Responsive card layout for mobile (1 column) */
+@media (max-width: 576px) {
+    .card {
+        width: 100%; /* 1 per row */
+    }
+    .cards {
+        justify-content: center; /* Ensure centered cards on mobile */
+    }
+}
+
+
+.b {
+            
+    padding-top: 10px;
+    font-size: 20px;
+    border-top: 1px solid #444;
+}
+
+.b p {
+    margin: 0;
+}
+.b a{
+    text-decoration: none;
+    color:white;
+}
+.b a:hover{
+    color: #473738;
+}
+/* Responsive font sizes */
+@media (max-width: 768px) { /* Tablet */
+    .b {
+        font-size: 18px; /* Smaller font size for tablets */
+    }
+}
+
+@media (max-width: 480px) { /* Mobile */
+    .b {
+        font-size: 16px; /* Even smaller font size for mobile */
+    }
+}
+.portfolio-heading {
+    font-size: 48px; /* Large font size for emphasis */
+    font-weight: 700; /* Bold text */
+    color: #333; /* Dark color for contrast on a light background */
+    text-transform: uppercase; /* Make text uppercase for impact */
+    text-align: center; /* Center-align the heading */
+    margin-bottom: 30px;
+    letter-spacing: 2px; /* Adds space between letters for style */
+    position: relative;
+    padding-top: 30px;
+}
+
+.portfolio-heading::after {
+    content: "";
+    width: 60px; /* Adjust width as desired */
+    height: 4px; /* Thin underline */
+    background-color:black; /* Accent color for the underline */
+    display: block;
+    margin: 10px auto 0; /* Center the underline */
+    border-radius: 2px; /* Slight rounding for a smooth effect */
+}

@@ -1,0 +1,698 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>    <style>
+      header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Keeps the logo on the left and items in the right */
+    padding: 15px 50px;
+	background-color: black;
+    z-index: 1111;
+}
+.header-right {
+    display: flex; 
+    align-items: center; 
+    margin-left: auto; /* This will push the entire container to the right */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    
+    margin-right: 15px; /* Space between logo and text */
+}
+
+header .logo h1 {
+    font-size: 30px;
+	background: linear-gradient(90deg, #FFDD00, #FF0000); /* Yellow to Red */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Dancing Script', cursive; /* Casual handwritten font */
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 4px #0a0a0a66;
+    margin: 0;
+}
+header ul {
+    display: flex;
+    margin: 0;
+    padding-left: 20px; /
+    margin-left: auto;/* Space between logo section and navigation */
+}
+
+
+
+header ul li {
+    position: relative; /* Add this line */
+    padding: 0 15px;
+}
+
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+  display: block;
+    transition: .4s;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+
+
+header ul li ul {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f7f7f7; /* Matches the header background */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 10px 0;
+    width: 250px;
+    z-index: 999; /* Ensures it stays above other content */
+    border-radius: 4px; /* Add slight roundness to the dropdown */
+}
+
+header ul li ul li {
+    width: 100%;
+}
+
+header ul li ul li a {
+    padding: 10px 20px;
+    white-space: nowrap;
+    color: #333;
+}
+
+/* Remove underline or border from dropdown items */
+header ul li ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color:black;
+}
+
+/* Show the dropdown on hover */
+header ul li:hover ul {
+    display: block;
+}
+header ul li .donate:hover {
+    background-color: #a3141b;
+}
+header ul li a:hover {
+    color:#e0e0e0;
+}
+header .bars {
+    display:none;
+    color:white;
+}
+header.active{
+    background-color:black;
+    box-shadow: 1px 0px 0px #dddd;
+}
+header.active .logo a{
+    color: black;
+}
+header .active ul{
+    color:black;
+}
+
+
+@media(max-width: 991px) {
+    .big-bg {
+        background-image: url('head2.jpg'); /* Replace with your image URL */
+        background-size: cover; /* Ensures the image covers the entire area */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    }
+
+            .container {
+                flex-direction: column;
+                overflow-wrap: break-word;
+            }
+
+            .image {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 0;
+				
+				
+            }
+.ourteam
+{
+font-size:16px;
+margin-top:30px;
+}
+            .text {
+                margin-top: 0;
+                padding: 0;
+                margin-left: 20px;
+				
+            }
+
+            .button-container {
+                width: 80%; 
+                margin-left: 16%;
+                gap: 20%;
+            }
+        
+
+    
+    header .navigation {
+        position: absolute;
+        top: 60px; /* Position below the header */
+        right: -100%; /* Start hidden */
+        width: 50%; /* Adjust width for mobile */
+        height: calc(100vh - 60px); /* Full height minus header */
+        background-color: black; /* Background color */
+        display: flex;
+        flex-direction: column;
+		background-color: black;
+        justify-content: flex-start; /* Align items at the top */
+        align-items: center;
+        transition: right 0.5s ease; /* Smooth transition */
+        box-shadow: -1px 0px 0px #dd;
+    }
+    
+    header .navigation li {
+        margin: 11px 0;
+        width: 100%; /* Full width for mobile */
+        text-align: center; /* Center text */
+    }
+    header {
+        width: 100%;
+        max-width: 1200px; /* Set a maximum width for the header */
+        margin: 0 auto; /* Center the header */
+		
+    }
+    
+    header .navigation {
+        max-width: 100%; /* Ensure the navigation doesn't exceed header width */
+    }
+    
+    /* Adjust padding or margin for the navigation items if necessary */
+    header ul {
+        padding: 0 20px; /* Add horizontal padding */
+    }
+    
+    header ul li {
+        padding: 0 15px; /* Space between menu items */
+    }
+    header ul li a:hover {
+        color:#cac2c2;
+    }
+    header .navigation li a {
+        color: #fff;
+        padding: 15px 0; /* Padding for clickable area */
+        width: 100%; /* Make links full width */
+    }
+
+    header .bars {
+        display: block; 
+        z-index:-1;/* Show hamburger menu */
+    }
+
+    /* Dropdown styles for mobile */
+    header ul li ul {
+        position: absolute; /* Dropdown position */
+        top: 100%; /* Position below parent */
+        left: 0; /* Align to left */
+        width: 100%; /* Full width */
+        display: none; /* Hide dropdown by default */
+    }
+
+    /* Show dropdown on hover */
+    header ul li:hover ul {
+        display: block; /* Show dropdown on hover */
+    }
+    header ul li:hover ul {
+        display: block; /* Show dropdown on hover */
+        background-color:black ;
+         /* Match the main header color */
+    }
+    header ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none; /* Keep it hidden initially */
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+
+    header ul li.open ul {
+        display: block; /* Open the dropdown when the class 'open' is added */
+		background-color:BLACK;
+    }
+
+
+    header ul li ul li a {
+        color:rgba(255, 255, 255, 0.2); /* Set dropdown text color to white */
+    }
+    
+    /* Optionally, add hover effect for dropdown items */
+    header ul li ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color:#e0e0e0 /* Light hover effect */
+    }
+    
+}
+
+@media (max-width: 380px) {
+    header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        padding: 10px; /* Adjust padding for header */
+    }
+
+    .logo {
+        width: 100%; /* Make logo container full width */
+        justify-content: center; /* Center content */
+    }
+
+    .logo img {
+        width: 40%; /* Adjust image width for small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .logo h1 {
+        font-size: 6vw; /* Responsive font size for very small screens */
+        font-weight: bold; /* Make the logo heading bold */
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center the text */
+        white-space: nowrap; /* Prevent wrapping */
+        color: white; /* Text color */
+    }
+
+    .navigation {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center navigation items */
+        margin-top: 10px; /* Space below logo */
+    }
+
+    .navigation li {
+        padding: 5px 0; /* Space between items */
+    }
+
+}
+
+   
+
+@media (max-width: 400px) {
+    header .logo img {
+        width: 35%; /* Logo size for small screens */
+    }
+
+}
+
+
+	   body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            color: black; /* Default text color */
+        }
+    .button {
+            border-radius: 16px;
+            background-color: black; /* Initial button background color */
+            border: none;
+            color: #FFFFFF; /* White text color */
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 230px;
+            transition: all 0.5s;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background-color: lightgray; /* Change background on hover */
+            color: black; /* Change text color on hover */
+        }
+
+        
+        .container {
+            display: flex;
+            height: auto;
+            align-items: flex-start; 
+        }
+
+        .a {
+            padding: 5%;
+            margin-top: 0px;
+            color: black;
+        }
+
+       .b {
+            
+    padding-top: 10px;
+    font-size: 20px;
+    border-top: 1px solid #444;
+}
+
+.b p {
+    margin: 0;
+}
+.b a{
+    text-decoration: none;
+    color:white;
+}
+.b a:hover{
+    color: #473738;
+}
+
+        .text {
+            padding: 5%;
+            color: black;
+            margin-top: 0;
+			
+    opacity: 0; /* Initial opacity */
+    animation: fadeIn 1s forwards; /* Animation properties */
+    animation-delay: 1s; /* Delay before the animation starts */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Fade to full opacity */
+    }
+}
+        }
+
+        .e {
+            margin-left: 60%;
+        }
+
+        .g {
+            margin-left: 60px;
+			margin-top:36px;
+        }
+
+        .image {
+            flex: 0 0 600px;
+            padding: 30px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s; /* Add transition for scaling */
+        }
+
+        img:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+		.button:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+
+        h1 {
+            font-size: 260%;
+            line-height: 1.5;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            line-height: 1.5;
+            color: #000;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 130%;
+            line-height: 1.5;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* Styles for dark mode */
+        .dark-mode {
+  background-color: #333;
+  color: #f0f0f0; /* Light text color for dark mode */
+}
+
+.dark-mode .button {
+  background-color: #555; /* Darker button background */
+  color: #f0f0f0; /* Light text color */
+}
+
+.dark-mode .button:hover {
+  background-color: #777; /* Change background on hover */
+  color: black; /* Dark text color on hover */
+}
+
+.dark-mode nav ul {
+  background-color: #444; /* Darker nav background */
+}
+
+.dark-mode .b {
+  background-color: black; /* Dark background for footer */
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode p {
+  color: #f0f0f0; /* Set text color to white in dark mode */
+}
+
+/* Add new styles here */
+.dark-mode a {
+  color: #f0f0f0; /* Set all links to white in dark mode */
+}
+
+.dark-mode .label {
+  color: #f0f0f0; /* Set label text to white in dark mode */
+}
+.ourteam img {
+width: 60%;
+height: auto;
+border-radius: 8px;
+ transition: transform 0.3s ease-in;
+
+display:inline;
+}
+
+.ourteam-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+padding: 30px;
+}
+.ourteam label {
+font-size: 18px;
+margin: 10px 0;
+}
+
+.ourteam label {
+color: #555;
+}    
+
+.ourteam:hover{
+ transform: scale(1.2);
+}
+   .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 10px;
+        }
+
+        .gallery-item {
+            background-color: white;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.9);
+            border-radius: 8px;
+            text-align: center;
+            flex: 1 1 calc(25% - 20px);
+            margin: 10px;
+            max-width: calc(25% - 20px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            width: 60%; 
+            margin-left: 23%;
+			padding:3px;
+        }
+        
+       
+        @media only screen and (max-width: 991px) {
+            .gallery-item {
+                flex: 1 1 calc(33.33% - 20px);
+                max-width: calc(33.33% - 20px);
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .gallery-item {
+                flex: 1 1 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+<header id="header">
+    <div class="logo">
+      <a href="#"><img src="logo.jpeg" alt="FurnitureLogo" width="70px" height="50px"></a>
+      <h1>VishvaKannada</h1>
+    </div>
+    <div class="header-right"></div>
+    <ul class="navigation">
+                    <li><a href="#">Home</a></li>
+                    <li> <a href="#">About us</a></li>
+                    <li><a href="#">Projects</a>
+                      <ul>
+                          <li><a href="Scratch.html">Scratch</a></li>
+                          <li><a href="klogo.html">Kannada logo</a></li>
+					          </ul>
+                  </li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#" >Donate</a></li>  
+                    
+                    
+                 
+                  <li>
+                      <button id="screen-reader-button" tabindex="8"  >
+                      <i class="fas fa-volume-up"></i>
+                  </button></li>
+
+                 </ul>     			
+                 <div class="bars" id="bar">
+                  <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 100 80" width="30px" fill="#ffffff">
+                          <rect class="bar1" width="100" height="10"></rect>
+                          <rect class="bar2" y="25" width="100" height="10"></rect>
+                          <rect class="bar3" y="50" width="100" height="10"></rect>
+                        </svg>
+                      </div>
+            </div>
+  </header>
+
+
+
+  <script src="main.js"></script>
+  <div class="image-section" style="margin-bottom: 20px;">
+    <!--<div class="text-overlay-container" style="position: relative; width: 100%;">
+        <img src="https://khushii.org/wp-content/uploads/2020/12/khushiitree.jpg" alt="Descriptive Alt Text" style="width: 100%; height:auto%;">
+        <div class="overlay-text" style="position: absolute; top: 30%; left: 10%; transform: translate(-50%, -50%); color:Black; font-size: 48px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-family:30px">
+       
+		</div>
+    </div>-->
+</div>
+
+<div class="container">
+    <div class="image" style="margin-top:70px">
+        <img src="../WT_Project/VishvaKannadaLogo (1).jpeg" alt="Vishva Kannada Logo" style="height:300px;width:300px;padding-left:100px; padding-top:85px;">
+    </div>
+    <div class="text">
+        <!-- New image added here -->
+        
+        <h1 style="margin-top:60px;">ABOUT VISHVAKANNADA</h1>
+        <p>Our aim is to promote and preserve the Kannada language and culture. We provide resources like language learning tools, 
+        literature, news, and cultural content relevant to Kannada speakers. The site could also feature community engagement 
+        through forums or events celebrating Kannada heritage.</p>
+    </div>
+</div>
+
+<div class="a">
+    <div class="button-container">
+        <a href="#team" class="button" id="teamButton">Meet our Team</a>
+        <a href="#gallery" class="button" id="galleryButton">Gallery</a>
+    </div></div>
+<div>
+    <h1 style="margin-top:30px;margin-left:60px">OUR MISSION</h1>
+    <p style="margin-left:60px">To provide resources for learning Kannada, share literature and cultural content, and support 
+    integrations that enhance the visibility and appreciation of Kannada language and arts.</p>
+    <p style="margin-left:60px">>The goal is to foster a deeper appreciation for Kannada heritage and encourage its use in daily life.
+    To safeguard and promote the rich heritage of the Kannada language and its associated traditions.</p>
+</div>
+
+<!-- Team Section -->
+<div id="team" class="team-section">
+    <h2 class="e" style="font-size:50px;margin-left:60px" >Our Team</h2>
+    <p class="e" style="margin-left:60px" >Meet the dedicated individuals working to promote Kannada language and culture!</p><br><br>
+    <div class="gallery-container">
+        <div class="ourteam">
+            <img src="../WT_Project/anand-sawant_2_w200_h200.jpeg" alt="Forest" style="height:300px;width:300px">
+			<p class="label" style="color:black">Name: Dr.Anand Savanth</p>
+			<p class="label" style="color:black">Profession: VSLI researcher and engineer</p>
+			<p class="label" style="color:black">Email: ananda03@gmail.com</p>
+
+			</div>
+        <div class="ourteam">
+            <img src="../WT_Project/Pavanaja-UB (1).jpg" alt="Landscape" style="height:320px;width:320px">
+            <p class="label" style="color:black">Name: Dr.U B Pavanaja</p>
+            <p class="label" style="color:black">Profession: CEO, Ex Scientist</p>
+			<p class="label" style="color:black">Email: pavanaja01@gmail.com</p>
+
+        </div>
+    </div>
+</div>
+
+<div id="gallery" class="team-section">
+    <h2 class="g" style="font-size:50px">Gallery</h2>
+    <p class="g">Explore our collection showcasing the beauty of Kannada culture!</p>
+    <div class="gallery-container" style="margin-bottom:30px">
+        <div class="gallery-item">
+            <img src="../WT_Project/WhatsApp Image 2024-10-10 at 12.55.00 PM.jpeg" alt="Forest" style="height:230px;">
+        </div>
+        <div class="gallery-item">
+            <img src="../WT_Project/WhatsApp Image 2024-10-10 at 12.54.59 PM.jpeg" alt="Landscape" style="height:230px;">
+        </div>
+        <div class="gallery-item">
+            <img src="../WT_Project/WhatsApp Image 2024-10-10 at 12.54.55 PM.jpeg" alt="Beach" style="height:230px;">
+        </div>
+        <div class="gallery-item">
+            <img src="../WT_Project/WhatsApp Image 2024-10-10 at 12.54.55 PM (1).jpeg" alt="Lion" style="height:230px;">
+        </div>
+        <div class="gallery-item">
+            <img src="../WT_Project/WhatsApp Image 2024-10-10 at 12.52.11 PM.jpeg" alt="Giraffe" style="height:230px;">
+        </div>
+        <div class="gallery-item">
+            <img src="../WT_Project/WhatsApp Image 2024-10-10 at 12.52.11 PM (5).jpeg" alt="Cheetah" style="height:230px;">
+        </div>
+        
+    </div>
+</div>
+
+<footer class="b" style="background-color:black; color:#E1D9D1; text-align:center; padding:20px;">
+    <p>Copyright &copy; 2024 VishvaKannada.com</p>
+    <a href="https://www.facebook.com/VishvaKannada" target="_blank">
+       <!-- <img src="D:\WTproject\images1.jfif" alt="Facebook Logo" style="height:55px;width:55px;">-->
+<p><i class="fa-brands fa-facebook-f"></i></a>
+<i class="fa-brands fa-instagram" style="padding:10px"></i>
+<i class="fa-brands fa-twitter"></i>
+<i class="fa-brands fa-linkedin"></i></p>
+<p><a href="contact.html">HOME</a> | <a href="project1(1).html">ABOUT US</a> | <a href="contact.html">PROJECTS</a> | <a href="contact.html">CONTACT US</a> | <a href="contact.html">DONATE</a> 
+    <p>Privacy Policy | Terms And Conditions</p>
+</footer>
+
+<script>
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'd' || event.key === 'D') {
+            document.body.classList.toggle('dark-mode');
+        }
+    });
+</script>
+
+</body>
+</html>
+
