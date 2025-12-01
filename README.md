@@ -1,30 +1,6 @@
 # Vishvakannada-website
 A responsive website for Vishvakannada Foundation, built using HTML, CSS, and JavaScript.
 
-
-
-## Project Structure
-/ — root directory
-│ index.html ← Home / landing page
-│ aboutus.html ← About the foundation
-│ contact.html ← Contact / Get in touch page
-│ donate.html / Donate.html ← Donation / Support page
-│ ... (other HTML pages)
-│
-├─ css/ ← CSS files
-│ styles.css
-│ ...
-│
-├─ js/ ← JavaScript files
-│ main.js
-│ ...
-│
-├─ assets/ (or images/) ← Images, logos, photos, etc.
-│ VishvakannadaLogo.jpeg
-│ event pictures, gallery images, etc.
-│
-└─ README.md ← This file
-
 # Features
 
 - Responsive design — works on desktop and mobile devices  
